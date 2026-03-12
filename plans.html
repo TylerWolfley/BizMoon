@@ -26,13 +26,73 @@
 <body>
   <a class="skip-link" href="#top">Skip to content</a>
   <div class="page-shell">
-    <header class="site-header">
+            <header class="site-header">
       <a class="brand" href="index.html" aria-label="BizMoon home">
         <img class="brand-logo" src="assets/images/bizmoon-logo-png.png" alt="BizMoon logo" width="80" height="80">
         <span class="brand-copy">
           <span class="brand-name">BizMoon</span>
           <span class="brand-tagline">done-for-you business launch</span>
-        <a href="faq.html">FAQ</a>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Services <span class="dropdown-arrow" aria-hidden="true">&#x25BE;</span>
+          </button>
+          <ul class="nav-dropdown-menu" role="menu">
+            <li><a href="services.html" role="menuitem">All Services</a></li>
+            <li><a href="services.html#launch-setup" role="menuitem">Launch Setup</a></li>
+            <li><a href="services.html#website-builds" role="menuitem">Website Builds</a></li>
+            <li><a href="services.html#google-business" role="menuitem">Google Business Profile</a></li>
+            <li><a href="services.html#brand-basics" role="menuitem">Brand Basics</a></li>
+            <li><a href="add-ons.html" role="menuitem">Add-Ons</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-current="true">
+            Packages <span class="dropdown-arrow" aria-hidden="true">&#x25BE;</span>
+          </button>
+          <ul class="nav-dropdown-menu" role="menu">
+            <li><a href="starter.html" role="menuitem">Starter</a></li>
+            <li><a href="launch.html" role="menuitem">Launch</a></li>
+            <li><a href="moonshot.html" role="menuitem">Moonshot</a></li>
+            <li><a href="compare.html" role="menuitem">Compare All Plans</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Process <span class="dropdown-arrow" aria-hidden="true">&#x25BE;</span>
+          </button>
+          <ul class="nav-dropdown-menu" role="menu">
+            <li><a href="how-it-works.html" role="menuitem">How It Works</a></li>
+            <li><a href="deliverables.html" role="menuitem">What&#x27;s Included</a></li>
+            <li><a href="how-it-works.html#revisions" role="menuitem">Revisions &amp; Scope</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Resources <span class="dropdown-arrow" aria-hidden="true">&#x25BE;</span>
+          </button>
+          <ul class="nav-dropdown-menu" role="menu">
+            <li><a href="faq.html" role="menuitem">FAQ</a></li>
+            <li><a href="deliverables.html" role="menuitem">Sample Deliverables</a></li>
+            <li><a href="who-its-for.html" role="menuitem">Who BizMoon Is For</a></li>
+          </ul>
+        </div>
+
         <a href="contact.html">Contact</a>
         <a class="nav-cta" href="contact.html">Start your launch</a>
       </nav>
@@ -171,7 +231,7 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+            <footer class="site-footer">
       <div class="footer-brand-block">
         <img class="footer-logo" src="assets/images/bizmoon-logo-png.png" alt="BizMoon logo" width="64" height="64" loading="lazy">
         <div>
@@ -183,7 +243,9 @@
         <p>Done-for-you launch setup for entrepreneurs and new businesses — web presence, Google Business Profile, and brand basics, delivered fast.</p>
         <nav class="footer-nav" aria-label="Footer">
           <a href="index.html">Home</a>
-          <a href="plans.html">Plans</a>
+          <a href="services.html">Services</a>
+          <a href="compare.html">Packages</a>
+          <a href="how-it-works.html">Process</a>
           <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
           <a href="privacy.html">Privacy</a>
