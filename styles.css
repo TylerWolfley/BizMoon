@@ -1148,6 +1148,382 @@ h3 {
 }
 
 
+/* ---- Output preview mockups (homepage proof strip + deliverables cards) ---- */
+
+.output-previews {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.output-preview {
+  display: grid;
+  align-content: start;
+  gap: 0.75rem;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+  box-shadow: var(--shadow-soft);
+}
+
+.output-preview-label {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.output-preview-caption {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.deliverable-preview {
+  margin-bottom: 0.35rem;
+}
+
+/* Browser frame */
+.mockup-browser {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.mockup-browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.42rem 0.65rem;
+  background: var(--panel-soft);
+  border-bottom: 1px solid var(--line);
+}
+
+.mockup-browser-dots {
+  display: flex;
+  gap: 0.28rem;
+  flex-shrink: 0;
+}
+
+.mockup-browser-dots span {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--line-strong);
+}
+
+.mockup-browser-url {
+  flex: 1;
+  height: 1.15rem;
+  padding: 0 0.45rem;
+  border-radius: 4px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  font-size: 0.64rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.mockup-browser-body {
+  padding: 0.8rem 0.85rem 0.9rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.mockup-pg-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-strong);
+  letter-spacing: -0.02em;
+}
+
+.mockup-pg-sub {
+  font-size: 0.64rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.mockup-pg-rule {
+  height: 1px;
+  background: var(--line);
+  margin: 0.1rem 0;
+}
+
+.mockup-pg-block {
+  height: 0.48rem;
+  border-radius: 3px;
+  background: var(--line);
+  width: 90%;
+}
+
+.mockup-pg-block.short {
+  width: 62%;
+}
+
+.mockup-pg-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.26rem 0.6rem;
+  border-radius: 5px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  width: fit-content;
+  margin-top: 0.15rem;
+}
+
+/* GBP card mockup */
+.mockup-gbp {
+  padding: 0.8rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  display: grid;
+  gap: 0.28rem;
+  background: var(--panel);
+}
+
+.mockup-gbp-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.mockup-gbp-stars {
+  color: #f5a623;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+.mockup-gbp-meta {
+  font-size: 0.64rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.mockup-gbp-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 0.15rem 0;
+}
+
+.mockup-gbp-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.64rem;
+  color: var(--muted);
+}
+
+.mockup-gbp-open {
+  color: #3d8f52;
+  font-weight: 600;
+}
+
+/* Document / estimate template mockup */
+.mockup-doc {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.mockup-doc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.8rem;
+  background: var(--panel-soft);
+  border-bottom: 1px solid var(--line);
+  gap: 0.5rem;
+}
+
+.mockup-doc-title {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.mockup-doc-brand {
+  font-size: 0.62rem;
+  color: var(--muted);
+  text-align: right;
+}
+
+.mockup-doc-body {
+  padding: 0.6rem 0.8rem 0.75rem;
+  display: grid;
+  gap: 0.22rem;
+}
+
+.mockup-doc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.64rem;
+  color: var(--muted);
+  padding: 0.2rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.mockup-doc-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-strong);
+  padding: 0.28rem 0 0;
+  border-top: 1px solid var(--line-strong);
+  margin-top: 0.1rem;
+}
+
+/* Contact form mockup */
+.mockup-form {
+  padding: 0.8rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  display: grid;
+  gap: 0.4rem;
+  background: var(--panel);
+}
+
+.mockup-form-group {
+  display: grid;
+  gap: 0.18rem;
+}
+
+.mockup-form-lbl {
+  font-size: 0.6rem;
+  color: var(--muted);
+}
+
+.mockup-form-field {
+  height: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--bg);
+}
+
+.mockup-form-area {
+  height: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--bg);
+}
+
+.mockup-form-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.28rem 0.65rem;
+  border-radius: 4px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  width: fit-content;
+  margin-top: 0.1rem;
+}
+
+/* Business email mockup */
+.mockup-email-card {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.8rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--panel);
+}
+
+.mockup-email-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 7px;
+  background: var(--accent-wash);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+.mockup-email-body {
+  display: grid;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.mockup-email-addr {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-strong);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mockup-email-note {
+  font-size: 0.62rem;
+  color: var(--muted);
+}
+
+/* Launch graphics mockup */
+.mockup-graphics-wrap {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.mockup-graphics-cover {
+  position: relative;
+  height: 2.8rem;
+  background: linear-gradient(135deg, rgba(23, 63, 120, 0.14) 0%, rgba(23, 63, 120, 0.07) 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.mockup-graphics-avatar {
+  position: absolute;
+  bottom: -0.85rem;
+  left: 0.75rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--panel);
+}
+
+.mockup-graphics-meta {
+  padding: 1.1rem 0.85rem 0.7rem;
+}
+
+.mockup-graphics-biz {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.mockup-graphics-cat {
+  font-size: 0.62rem;
+  color: var(--muted);
+  margin-top: 0.1rem;
+}
+
 @media (max-width: 1024px) {
   .hero,
   .page-hero,
@@ -1160,6 +1536,7 @@ h3 {
   .value-grid.two-up,
   .faq-list-wide,
   .deliverable-grid,
+  .output-previews,
   .founder-bio {
     grid-template-columns: 1fr;
   }
