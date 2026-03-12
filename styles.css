@@ -90,53 +90,53 @@ textarea {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 1.25rem 2rem;
-  padding: 1rem 0;
+  gap: 0.75rem 1.5rem;
+  padding: 0.6rem 0;
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.95rem;
+  gap: 0.65rem;
   min-width: 0;
 }
 
 .brand-logo {
-  width: clamp(4rem, 7vw, 5rem);
-  height: clamp(4rem, 7vw, 5rem);
+  width: clamp(2.75rem, 4.5vw, 3.5rem);
+  height: clamp(2.75rem, 4.5vw, 3.5rem);
   object-fit: contain;
 }
 
 .brand-copy {
   display: grid;
-  gap: 0.15rem;
+  gap: 0.1rem;
 }
 
 .brand-name {
   color: var(--text-strong);
-  font-size: clamp(1.3rem, 1.8vw, 1.55rem);
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
   font-weight: 700;
   letter-spacing: -0.03em;
 }
 
 .brand-tagline {
   color: var(--muted);
-  font-size: 0.94rem;
+  font-size: 0.82rem;
 }
 
 .site-nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 1.35rem;
+  gap: 1rem;
 }
 
 .site-nav a {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 
@@ -151,13 +151,14 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.85rem;
-  padding: 0.8rem 1.1rem;
-  margin-left: 0.3rem;
+  min-height: 2.25rem;
+  padding: 0.5rem 1rem;
+  margin-left: 0.25rem;
   border: 1px solid transparent;
-  border-radius: 12px;
+  border-radius: 10px;
   background: var(--button);
   color: var(--button-text) !important;
+  font-size: 0.875rem;
   font-weight: 700;
   transition: background 0.2s ease;
 }
@@ -794,32 +795,33 @@ h3 {
 
 .site-footer {
   display: grid;
-  gap: 1.8rem;
-  padding: 2.75rem 0 3rem;
+  gap: 1.1rem;
+  padding: 1.75rem 0 2rem;
   border-top: 1px solid var(--line);
 }
 
 .footer-brand-block {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.7rem;
 }
 
 .footer-logo {
-  width: 4rem;
-  height: 4rem;
+  width: 2.75rem;
+  height: 2.75rem;
   object-fit: contain;
 }
 
 .footer-title {
   margin: 0;
   color: var(--text-strong);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
 .footer-tagline {
-  margin: 0.2rem 0 0;
+  margin: 0.15rem 0 0;
+  font-size: 0.82rem;
 }
 
 .footer-meta,
@@ -827,24 +829,24 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .footer-nav a,
 .footer-bottom a {
   color: var(--accent);
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 
 .footer-bottom {
-  padding-top: 1rem;
+  padding-top: 0.75rem;
   border-top: 1px solid var(--line);
 }
 
@@ -1124,7 +1126,7 @@ h3 {
   }
 
   .site-header {
-    padding: 0.85rem 0;
+    padding: 0.55rem 0;
   }
 
   main {
@@ -1149,12 +1151,12 @@ h3 {
   }
 
   .brand {
-    gap: 0.8rem;
+    gap: 0.55rem;
   }
 
   .brand-logo {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   h1 {
