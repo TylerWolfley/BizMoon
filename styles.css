@@ -799,6 +799,10 @@ h3 {
   background: linear-gradient(135deg, rgba(23, 63, 120, 0.04) 0%, rgba(23, 63, 120, 0.02) 100%);
 }
 
+.sample-section .outcome-card {
+  margin-top: 1.5rem;
+}
+
 .outcome-headline {
   margin: 0.6rem 0 0.5rem;
   font-size: 1.1rem;
