@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact BizMoon | Start your launch</title>
+  <meta name="description" content="Contact BizMoon to start your launch, ask about a package, or talk through the right fit for your service business.">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="assets/images/bizmoon-logo-png.png">
+  <link rel="shortcut icon" type="image/png" href="assets/images/bizmoon-logo-png.png">
+  <link rel="apple-touch-icon" href="assets/images/bizmoon-logo-png.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#top">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="BizMoon home">
+        <img class="brand-logo" src="assets/images/bizmoon-logo-png.png" alt="BizMoon logo">
+        <span class="brand-copy">
+          <span class="brand-name">BizMoon</span>
+          <span class="brand-tagline">where startups start</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="plans.html">Plans</a>
+        <a href="faq.html">FAQ</a>
+        <a class="active" href="contact.html" aria-current="page">Contact</a>
+        <a class="nav-cta" href="contact.html">Start your launch</a>
+      </nav>
+    </header>
+
+    <main id="top" tabindex="-1">
+      <section class="hero page-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Contact</p>
+          <h1>Tell BizMoon what you are building.</h1>
+          <p class="hero-text">Bring the service idea, the half-built setup, or the launch that still feels scattered. BizMoon will help turn it into something cleaner and customer-facing.</p>
+        </div>
+        <div class="hero-note page-note">
+          <p class="eyebrow">Best fit</p>
+          <h2>New service businesses, local businesses, and solo operators.</h2>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-panel">
+          <div class="contact-copy">
+            <p class="eyebrow">Start here</p>
+            <h2>If you are ready to stop piecing it together, this is the next step.</h2>
+            <p>Use the form to tell BizMoon what the business is, where you are in the process, and what you want live first.</p>
+            <div class="contact-trust">
+              <div>
+                <strong>How inquiries work</strong>
+                <p>BizMoon starts by reviewing package fit, project scope, and what needs to go live first.</p>
+              </div>
+              <div>
+                <strong>What to expect</strong>
+                <p>Clear package guidance, direct communication, and honest wording around deliverables and platform-dependent work.</p>
+              </div>
+              <div>
+                <strong>Inquiry privacy</strong>
+                <p>The information you share is used only to review fit, discuss services, and follow up about your request.</p>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" name="bizmoon-contact" method="post" data-netlify="true" netlify-honeypot="company" aria-label="Contact BizMoon">
+            <input type="hidden" name="form-name" value="bizmoon-contact">
+            <p class="form-honeypot" aria-hidden="true">
+              <label>
+                Leave this field empty
+                <input type="text" name="company" autocomplete="off" tabindex="-1">
+              </label>
+            </p>
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" autocomplete="name" required>
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            </label>
+            <label>
+              Which package are you considering?
+              <input type="text" name="package" placeholder="Starter, Launch, Moonshot, or not sure yet" autocomplete="off" required>
+            </label>
+            <label>
+              What are you building?
+              <textarea name="message" rows="5" placeholder="Tell me what the business is, where you are in the process, and what you want live first." required></textarea>
+            </label>
+            <button class="button button-primary" type="submit">Start your BizMoon launch</button>
+            <p class="form-note">Project inquiries only. BizMoon uses the details you share to review package fit, scope, and next steps.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand-block">
+        <img class="footer-logo" src="assets/images/bizmoon-logo-png.png" alt="BizMoon logo">
+        <div>
+          <p class="footer-title">BizMoon</p>
+          <p class="footer-tagline">where startups start</p>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p>Launch support for new service businesses that need real momentum, not more guesswork.</p>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="plans.html">Plans</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> BizMoon. Real launch value delivered fast.</p>
+        <a href="plans.html">View plans</a>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
