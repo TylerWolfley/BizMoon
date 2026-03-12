@@ -1557,11 +1557,14 @@ h3 {
   .site-header {
     grid-template-columns: 1fr auto;
     gap: 1rem;
-    /* Break out of page-shell container so header fills edge-to-edge */
-    margin-left: -1rem;
-    margin-right: -1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    /* Full-bleed: stretch header to viewport edges */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding-left: max(1rem, env(safe-area-inset-left, 1rem));
+    padding-right: max(1rem, env(safe-area-inset-right, 1rem));
+    /* Solid background on mobile for a crisp edge-to-edge look */
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: 1px solid var(--line);
   }
 
   .site-nav {
@@ -1653,10 +1656,9 @@ h3 {
   }
 
   .site-header {
-    padding: 0.4rem 0.7rem;
-    /* Adjust breakout for smaller page-shell margins at this breakpoint */
-    margin-left: -0.7rem;
-    margin-right: -0.7rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    /* padding-left/right handled by 900px rule with safe-area support */
   }
 
   main {
