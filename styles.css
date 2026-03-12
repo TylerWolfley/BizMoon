@@ -192,6 +192,7 @@ main > section + section {
 .outcome-section,
 .addons-section,
 .faq-section,
+.process-section,
 .contact-section,
 .legal-section {
   padding: 3.5rem 0;
@@ -752,6 +753,13 @@ h3 {
   font-size: 0.9rem;
 }
 
+.form-note a {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .form-email a {
   color: var(--accent);
   font-weight: 500;
@@ -882,6 +890,146 @@ h3 {
   line-height: 1.1;
 }
 
+.founder-bio {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr);
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.founder-bio-text {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.founder-bio-text p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.founder-facts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+  padding: 1.25rem 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--accent-wash);
+}
+
+.founder-facts li {
+  position: relative;
+  padding-left: 1.15rem;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 0.94rem;
+}
+
+.founder-facts li::before {
+  content: "";
+  position: absolute;
+  top: 0.65rem;
+  left: 0;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.deliverable-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.deliverable-card {
+  display: grid;
+  align-content: start;
+  gap: 0.55rem;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel-soft);
+}
+
+.deliverable-card h3 {
+  font-size: 1.05rem;
+}
+
+.deliverable-card p {
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 0.94rem;
+}
+
+.deliverable-label {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.process-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0;
+}
+
+.process-steps li {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: 1.35rem;
+  padding: 1.35rem 0;
+  border-top: 1px solid var(--line);
+  align-items: start;
+}
+
+.process-steps li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.step-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent-wash);
+  border: 1px solid var(--line-strong);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-top: 0.12rem;
+}
+
+.step-copy {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.step-copy h3 {
+  font-size: 1.1rem;
+}
+
+.step-copy p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+
 @media (max-width: 1024px) {
   .hero,
   .page-hero,
@@ -892,7 +1040,9 @@ h3 {
   .value-grid,
   .trust-grid,
   .value-grid.two-up,
-  .faq-list-wide {
+  .faq-list-wide,
+  .deliverable-grid,
+  .founder-bio {
     grid-template-columns: 1fr;
   }
 
@@ -979,6 +1129,7 @@ h3 {
   .outcome-section,
   .addons-section,
   .faq-section,
+  .process-section,
   .contact-section,
   .legal-section {
     padding: 2.6rem 0;
