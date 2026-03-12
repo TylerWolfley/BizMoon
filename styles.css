@@ -272,6 +272,7 @@ main > section + section {
 .trust-section,
 .value-section,
 .packages-section,
+.compare-section,
 .details-section,
 .sample-section,
 .outcome-section,
@@ -536,6 +537,175 @@ h3 {
 .section-cta {
   margin-top: 1.25rem;
 }
+
+/* ─── COMPARE SECTION ─────────────────────────────────── */
+
+.compare-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  background: var(--panel);
+}
+
+.compare-table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.compare-head-row th {
+  padding: 1.5rem 1.4rem 1.4rem;
+  vertical-align: top;
+  text-align: left;
+  border-bottom: 1px solid var(--line-strong);
+  font-weight: normal;
+}
+
+.compare-th-label {
+  width: 200px;
+}
+
+.compare-pkg-header {
+  display: grid;
+  gap: 0.45rem;
+  align-content: start;
+}
+
+.compare-pkg-kicker {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.compare-pkg-price {
+  margin: 0;
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--text-strong);
+  line-height: 1;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.compare-pkg-turnaround {
+  margin: 0;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.compare-fit-pill {
+  display: inline-flex;
+  align-self: start;
+  width: fit-content;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--panel-soft);
+  margin: 0;
+}
+
+.compare-pkg-desc {
+  margin: 0;
+  font-size: 0.87rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.compare-flagship-badge {
+  margin: 0;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-bottom: 0.25rem;
+}
+
+.compare-cta {
+  width: 100%;
+  margin-top: 0.35rem;
+}
+
+.compare-featured-col {
+  background: linear-gradient(180deg, rgba(23, 63, 120, 0.055) 0%, rgba(23, 63, 120, 0.025) 100%);
+  border-left: 1px solid rgba(23, 63, 120, 0.15);
+  border-right: 1px solid rgba(23, 63, 120, 0.15);
+}
+
+.compare-head-row .compare-featured-col {
+  border-bottom-color: rgba(23, 63, 120, 0.22);
+}
+
+.compare-feature {
+  padding: 0.9rem 1.4rem;
+  font-size: 0.94rem;
+  font-weight: 500;
+  color: var(--text);
+  text-align: left;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+}
+
+.compare-table tbody tr:nth-child(even) .compare-feature {
+  background: var(--panel-soft);
+}
+
+.compare-val {
+  text-align: center;
+  padding: 0.85rem 1rem;
+  vertical-align: middle;
+  border-top: 1px solid var(--line);
+}
+
+.compare-table tbody tr:nth-child(even) .compare-val {
+  background: var(--panel-soft);
+}
+
+.compare-table tbody tr:nth-child(even) .compare-val.compare-featured-col {
+  background: rgba(23, 63, 120, 0.06);
+}
+
+.cmp-yes {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  background: rgba(23, 63, 120, 0.1);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.cmp-no {
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 400;
+  opacity: 0.45;
+}
+
+.cmp-label {
+  display: inline-block;
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ─────────────────────────────────────────────────────── */
 
 .button {
   display: inline-flex;
@@ -1671,6 +1841,7 @@ h3 {
   .trust-section,
   .value-section,
   .packages-section,
+  .compare-section,
   .details-section,
   .sample-section,
   .outcome-section,
@@ -1680,6 +1851,41 @@ h3 {
   .contact-section,
   .legal-section {
     padding: 2.25rem 0;
+  }
+
+  .compare-scroll {
+    border-radius: 14px;
+  }
+
+  .compare-th-label {
+    width: 150px;
+  }
+
+  .compare-head-row th {
+    padding: 1.2rem 1rem 1.15rem;
+  }
+
+  .compare-feature {
+    padding: 0.8rem 1rem;
+    font-size: 0.88rem;
+  }
+
+  .compare-val {
+    padding: 0.8rem 0.75rem;
+  }
+
+  .compare-pkg-price {
+    font-size: 1.55rem;
+  }
+
+  .compare-pkg-desc {
+    display: none;
+  }
+
+  .compare-cta {
+    font-size: 0.82rem;
+    padding: 0.6rem 0.75rem;
+    min-height: 2.45rem;
   }
 
   .brand {
