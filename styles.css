@@ -90,8 +90,8 @@ textarea {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 0.75rem 1.5rem;
-  padding: 0.6rem 0;
+  gap: 0.5rem 1.25rem;
+  padding: 0.45rem 0;
   border-bottom: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px);
@@ -100,13 +100,13 @@ textarea {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
   min-width: 0;
 }
 
 .brand-logo {
-  width: clamp(2.75rem, 4.5vw, 3.5rem);
-  height: clamp(2.75rem, 4.5vw, 3.5rem);
+  width: clamp(2.2rem, 3.5vw, 2.65rem);
+  height: clamp(2.2rem, 3.5vw, 2.65rem);
   object-fit: contain;
 }
 
@@ -117,21 +117,21 @@ textarea {
 
 .brand-name {
   color: var(--text-strong);
-  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
   font-weight: 700;
   letter-spacing: -0.03em;
 }
 
 .brand-tagline {
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.76rem;
 }
 
 .site-nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
 .site-nav a {
@@ -151,14 +151,14 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.25rem;
-  padding: 0.5rem 1rem;
-  margin-left: 0.25rem;
+  min-height: 2.1rem;
+  padding: 0.45rem 0.9rem;
+  margin-left: 0.2rem;
   border: 1px solid transparent;
-  border-radius: 10px;
+  border-radius: 9px;
   background: var(--button);
   color: var(--button-text) !important;
-  font-size: 0.875rem;
+  font-size: 0.84rem;
   font-weight: 700;
   transition: background 0.2s ease;
 }
@@ -216,17 +216,17 @@ textarea {
 
 .nav-dropdown-menu {
   position: absolute;
-  top: calc(100% + 0.6rem);
+  top: calc(100% + 0.45rem);
   left: 50%;
   transform: translateX(-50%);
-  min-width: 190px;
+  min-width: 185px;
   list-style: none;
   margin: 0;
-  padding: 0.4rem;
+  padding: 0.35rem;
   background: var(--panel);
   border: 1px solid var(--line);
-  border-radius: 14px;
-  box-shadow: 0 12px 32px rgba(11, 26, 47, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(11, 26, 47, 0.1);
   display: none;
   z-index: 100;
 }
@@ -237,10 +237,10 @@ textarea {
 
 .nav-dropdown-menu li a {
   display: block;
-  padding: 0.55rem 0.85rem;
-  border-radius: 9px;
+  padding: 0.48rem 0.8rem;
+  border-radius: 8px;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: 0.855rem;
   font-weight: 500;
   white-space: nowrap;
   transition: background 0.15s ease, color 0.15s ease;
@@ -259,7 +259,7 @@ textarea {
 
 main {
   display: block;
-  padding: 0.5rem 0 4rem;
+  padding: 0.25rem 0 3.5rem;
 }
 
 main > section + section {
@@ -280,15 +280,15 @@ main > section + section {
 .process-section,
 .contact-section,
 .legal-section {
-  padding: 3.5rem 0;
+  padding: 3rem 0;
 }
 
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
-  gap: 3.25rem;
+  gap: 3rem;
   align-items: center;
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
 }
 
 .page-hero {
@@ -297,11 +297,11 @@ main > section + section {
 }
 
 .eyebrow {
-  margin: 0 0 0.85rem;
+  margin: 0 0 0.75rem;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 700;
 }
 
@@ -370,13 +370,13 @@ h3 {
 
 .hero-text {
   max-width: 35rem;
-  font-size: 1.04rem;
+  font-size: 1rem;
 }
 
 .section-heading {
   display: grid;
-  gap: 0.75rem;
-  margin-bottom: 2rem;
+  gap: 0.65rem;
+  margin-bottom: 1.75rem;
 }
 
 .section-heading.narrow {
@@ -523,11 +523,11 @@ h3 {
 .section-cta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.85rem;
+  gap: 0.75rem;
 }
 
 .hero-actions {
-  margin: 1.8rem 0 1.4rem;
+  margin: 1.5rem 0 1.2rem;
 }
 
 .package-actions {
@@ -535,18 +535,18 @@ h3 {
 }
 
 .section-cta {
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 3.1rem;
-  padding: 0.85rem 1.15rem;
+  min-height: 2.85rem;
+  padding: 0.72rem 1.1rem;
   border: 1px solid transparent;
-  border-radius: 12px;
-  font-size: 0.95rem;
+  border-radius: 11px;
+  font-size: 0.92rem;
   font-weight: 700;
   transition:
     border-color 0.2s ease,
@@ -646,13 +646,13 @@ h3 {
 }
 
 .intro-band {
-  padding-top: 2.25rem;
+  padding-top: 2rem;
 }
 
 .intro-band p {
   max-width: 56rem;
   margin: 0;
-  font-size: 1.08rem;
+  font-size: 1.04rem;
 }
 
 .detail-list {
@@ -897,33 +897,33 @@ h3 {
 
 .site-footer {
   display: grid;
-  gap: 1.1rem;
-  padding: 1.75rem 0 2rem;
+  gap: 0.9rem;
+  padding: 1.4rem 0 1.6rem;
   border-top: 1px solid var(--line);
 }
 
 .footer-brand-block {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.6rem;
 }
 
 .footer-logo {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 2.25rem;
+  height: 2.25rem;
   object-fit: contain;
 }
 
 .footer-title {
   margin: 0;
   color: var(--text-strong);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
 }
 
 .footer-tagline {
-  margin: 0.15rem 0 0;
-  font-size: 0.82rem;
+  margin: 0.1rem 0 0;
+  font-size: 0.78rem;
 }
 
 .footer-meta,
@@ -937,35 +937,35 @@ h3 {
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .footer-nav a,
 .footer-bottom a {
   color: var(--accent);
-  font-size: 0.875rem;
+  font-size: 0.855rem;
   font-weight: 500;
 }
 
 .footer-bottom {
-  padding-top: 0.75rem;
+  padding-top: 0.65rem;
   border-top: 1px solid var(--line);
 }
 
 .home-hero {
   grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.7fr);
-  gap: 2.5rem;
+  gap: 2.25rem;
   align-items: start;
 }
 
 .home-hero h1 {
   max-width: none;
-  font-size: clamp(2.85rem, 6vw, 4.7rem);
+  font-size: clamp(2.75rem, 5.8vw, 4.4rem);
   line-height: 0.95;
 }
 
 .home-hero .hero-text {
-  margin-top: 1rem;
+  margin-top: 0.85rem;
 }
 
 .home-hero .hero-logo-stage {
@@ -1166,7 +1166,7 @@ h3 {
 
   .hero,
   .home-hero {
-    gap: 2rem;
+    gap: 1.75rem;
   }
 
   .hero-visual {
@@ -1191,8 +1191,8 @@ h3 {
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.9rem;
-    padding: 0.8rem 0 0.2rem;
+    gap: 0.8rem;
+    padding: 0.65rem 0 0.15rem;
   }
 
   .site-nav.is-open {
@@ -1275,11 +1275,11 @@ h3 {
   }
 
   .site-header {
-    padding: 0.55rem 0;
+    padding: 0.4rem 0;
   }
 
   main {
-    padding-top: 0.8rem;
+    padding-top: 0.5rem;
   }
 
   .hero,
@@ -1296,16 +1296,16 @@ h3 {
   .process-section,
   .contact-section,
   .legal-section {
-    padding: 2.6rem 0;
+    padding: 2.25rem 0;
   }
 
   .brand {
-    gap: 0.55rem;
+    gap: 0.4rem;
   }
 
   .brand-logo {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.1rem;
+    height: 2.1rem;
   }
 
   h1 {
@@ -1314,13 +1314,13 @@ h3 {
 
   .page-hero .hero-copy h1,
   .home-hero h1 {
-    font-size: clamp(2.35rem, 11vw, 3.25rem);
+    font-size: clamp(2.25rem, 11vw, 3.1rem);
   }
 
   h2,
   .section-heading h2,
   .contact-copy h2 {
-    font-size: clamp(1.7rem, 8vw, 2.2rem);
+    font-size: clamp(1.65rem, 8vw, 2.15rem);
   }
 
   .package-card,
@@ -1329,7 +1329,7 @@ h3 {
   .trust-grid article,
   .faq-list article,
   .contact-trust div {
-    border-radius: 14px;
+    border-radius: 12px;
   }
 
   .package-card,
