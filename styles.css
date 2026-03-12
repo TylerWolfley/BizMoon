@@ -547,62 +547,18 @@ h3 {
   line-height: 1.08;
 }
 
-.hero-panel {
-  display: grid;
-  align-content: start;
-  padding: 1.6rem 1.75rem;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: linear-gradient(180deg, #f7fbff 0%, #eef4fb 100%);
+.hero-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.92;
+  background:
+    url('assets/images/bizmoon-logo-png.png') 52% 38% / 240% no-repeat,
+    radial-gradient(ellipse at 52% 38%, rgba(23, 63, 120, 0.10) 0%, rgba(23, 63, 120, 0.03) 48%, transparent 70%);
 }
 
-.hero-panel > .eyebrow {
-  margin-bottom: 0.2rem;
-}
-
-.hero-panel-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 0;
-}
-
-.hero-panel-list li {
-  display: grid;
-  gap: 0.18rem;
-  padding: 0.85rem 0;
-  border-top: 1px solid var(--line);
-}
-
-.hero-panel-list li:first-child {
-  border-top: none;
-  padding-top: 0.65rem;
-}
-
-.hero-panel-list strong {
-  color: var(--text-strong);
-  font-size: 0.96rem;
-  font-weight: 700;
-}
-
-.hero-panel-list span {
-  color: var(--muted);
-  font-size: 0.875rem;
-  line-height: 1.5;
-}
-
-.hero-panel-footer {
-  margin-top: 1.1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 0.875rem;
-}
-
-.hero-panel-footer strong {
-  color: var(--text-strong);
-  font-weight: 700;
+.hero-visual img {
+  /* Decorative — displayed via background-image for precise crop control */
+  display: none;
 }
 
 .intro-band {
@@ -1125,6 +1081,10 @@ h3 {
     gap: 2rem;
   }
 
+  .hero-visual {
+    display: none;
+  }
+
   .footer-meta,
   .footer-bottom {
     display: grid;
@@ -1231,15 +1191,6 @@ h3 {
   .section-heading h2,
   .contact-copy h2 {
     font-size: clamp(1.7rem, 8vw, 2.2rem);
-  }
-
-  .hero-logo-stage {
-    min-height: 220px;
-    padding: 1rem;
-  }
-
-  .hero-panel {
-    padding: 1.25rem 1.4rem;
   }
 
   .package-card,
