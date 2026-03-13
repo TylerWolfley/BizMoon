@@ -2354,3 +2354,221 @@ h3 {
     scroll-behavior: auto;
   }
 }
+
+/* ── BizMoon Orbit page ──────────────────────────────────── */
+
+.orbit-hero-support {
+  margin-top: 0.85rem;
+  max-width: 38rem;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.orbit-scope-note {
+  max-width: 52rem;
+  margin: 2rem auto 0;
+  padding: 1rem 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel-soft);
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  text-align: center;
+}
+
+/* Steps */
+.orbit-steps-section {
+  padding: 4rem 0;
+}
+
+.orbit-steps {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 52rem;
+  margin: 2.5rem auto 0;
+}
+
+.orbit-step {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.orbit-step-num {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  padding-top: 0.1rem;
+}
+
+.orbit-step-copy h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.orbit-step-copy p {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.orbit-queue-note {
+  max-width: 52rem;
+  margin: 1.75rem auto 0;
+  padding: 1rem 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--accent-wash);
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.orbit-queue-note strong {
+  color: var(--text-strong);
+}
+
+/* Plan price modifier */
+.orbit-per-mo {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 0.1rem;
+}
+
+/* Request types */
+.orbit-requests-section {
+  padding: 4rem 0;
+}
+
+.orbit-request-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 60rem;
+  margin: 2.5rem auto 0;
+}
+
+.orbit-request-col {
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.orbit-col-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+
+.orbit-request-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.orbit-request-list li {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.orbit-request-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.8rem;
+  top: 0.05rem;
+}
+
+.orbit-not-included {
+  max-width: 52rem;
+  margin: 2.5rem auto 0;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--panel-soft);
+}
+
+.orbit-not-included .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.orbit-not-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-strong);
+  margin: 0 0 0.85rem;
+}
+
+.orbit-no-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.orbit-no-list li {
+  color: var(--muted);
+  font-size: 0.88rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.orbit-no-list li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  font-size: 0.7rem;
+  color: var(--muted);
+  top: 0.15rem;
+}
+
+/* Why monthly section */
+.orbit-why-section {
+  padding: 4rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .orbit-request-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .orbit-step {
+    grid-template-columns: 2.5rem 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .orbit-step-num {
+    font-size: 1.4rem;
+  }
+
+  .orbit-no-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
