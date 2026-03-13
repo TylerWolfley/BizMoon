@@ -1880,6 +1880,326 @@ h3 {
 .wrr-cta-note     { padding-top: 0; border-top: none; }
 .wrr-cta-buttons  { display: grid; gap: 0.75rem; margin-top: 0.5rem; }
 
+/* ── WRR site mockup color tokens (simulate the dark-blue WRR site) ─── */
+:root {
+  --wrr-site-dark: #0b1d40;
+  --wrr-site-blue: var(--accent);
+  --wrr-site-overlay: rgba(11, 29, 64, 0.6);
+  --wrr-site-border-light: rgba(255, 255, 255, 0.1);
+  --wrr-site-btn-bg: rgba(255, 255, 255, 0.15);
+  --wrr-site-btn-border: rgba(255, 255, 255, 0.2);
+  --wrr-site-text-dim: rgba(255, 255, 255, 0.55);
+  --wrr-site-text-mid: rgba(255, 255, 255, 0.72);
+}
+
+/* ── WRR proof chips ─────────────────────────────────────── */
+.wrr-proof-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+.wrr-proof-chip {
+  display: inline-flex;
+  padding: 0.26rem 0.7rem;
+  background: var(--accent-wash);
+  border: 1px solid var(--accent-soft);
+  border-radius: 100px;
+  font-size: 0.74rem;
+  color: var(--accent);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ── WRR live site showcase ──────────────────────────────── */
+.wrr-live-section {
+  padding: 4.5rem 0 3rem;
+  border-top: 1px solid var(--line);
+}
+
+.wrr-live-section .section-wrap {
+  display: grid;
+  gap: 2rem;
+}
+
+.wrr-live-header {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 40rem;
+}
+
+.wrr-live-header h2 {
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-strong);
+}
+
+.wrr-live-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.wrr-live-link:hover {
+  text-decoration: underline;
+}
+
+/* Large browser mockup */
+.wrr-browser-lg {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--panel);
+  box-shadow: var(--shadow-soft);
+}
+
+.wrr-browser-lg-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.6rem 0.9rem;
+  background: var(--panel-soft);
+  border-bottom: 1px solid var(--line);
+}
+
+.wrr-browser-lg-dots {
+  display: flex;
+  gap: 0.32rem;
+  flex-shrink: 0;
+}
+
+.wrr-browser-lg-dots span {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--line-strong);
+}
+
+.wrr-browser-lg-url {
+  flex: 1;
+  height: 1.5rem;
+  padding: 0 0.6rem;
+  border-radius: 5px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  font-size: 0.76rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+}
+
+.wrr-browser-lg-body {
+  display: grid;
+}
+
+/* Site nav inside mockup */
+.wrr-site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 1.75rem;
+  background: var(--wrr-site-overlay);
+  border-bottom: 1px solid var(--wrr-site-border-light);
+}
+
+.wrr-site-nav-brand {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.wrr-site-nav-cta {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--wrr-site-btn-bg);
+  padding: 0.22rem 0.65rem;
+  border-radius: 4px;
+  border: 1px solid var(--wrr-site-btn-border);
+}
+
+/* Site hero inside mockup */
+.wrr-site-hero {
+  background: linear-gradient(135deg, var(--wrr-site-dark) 0%, var(--wrr-site-blue) 100%);
+  padding: 2.5rem 1.75rem 2rem;
+}
+
+.wrr-site-eyebrow {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--wrr-site-text-dim);
+  margin: 0 0 0.6rem;
+}
+
+.wrr-site-hero-name {
+  font-size: clamp(1.15rem, 2.5vw, 1.6rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 0 0 0.55rem;
+  max-width: 28rem;
+}
+
+.wrr-site-hero-sub {
+  font-size: 0.8rem;
+  color: var(--wrr-site-text-mid);
+  line-height: 1.55;
+  max-width: 28rem;
+  margin: 0 0 1.1rem;
+}
+
+.wrr-site-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.wrr-site-hero-btn {
+  display: inline-flex;
+  padding: 0.45rem 1.1rem;
+  background: #fff;
+  color: var(--wrr-site-blue);
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.wrr-site-hero-secondary {
+  font-size: 0.68rem;
+  color: var(--wrr-site-text-dim);
+}
+
+/* Services section inside mockup */
+.wrr-site-services {
+  padding: 1.6rem 1.75rem;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+
+.wrr-site-svc-heading {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-strong);
+  margin: 0 0 0.9rem;
+  letter-spacing: -0.01em;
+}
+
+.wrr-site-svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+}
+
+.wrr-site-svc-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.7rem;
+}
+
+.wrr-site-svc-card-name {
+  font-size: 0.64rem;
+  font-weight: 700;
+  color: var(--text-strong);
+  line-height: 1.3;
+  margin: 0 0 0.3rem;
+}
+
+.wrr-site-svc-card-desc {
+  font-size: 0.56rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Quote form inside mockup */
+.wrr-site-contact {
+  padding: 1.35rem 1.75rem 1.6rem;
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+}
+
+.wrr-site-contact-heading {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-strong);
+  margin: 0 0 0.8rem;
+}
+
+.wrr-site-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  max-width: 28rem;
+}
+
+.wrr-site-form-field {
+  height: 1.6rem;
+  border-radius: 5px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.wrr-site-form-field.full {
+  grid-column: 1 / -1;
+}
+
+.wrr-site-form-field.tall {
+  height: 3.5rem;
+}
+
+.wrr-site-form-btn {
+  display: inline-flex;
+  margin-top: 0.6rem;
+  padding: 0.38rem 0.95rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.64rem;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+/* Outcome stat cards */
+.wrr-outcome-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.wrr-outcome-stat {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.35rem 1.25rem;
+}
+
+.wrr-outcome-stat-num {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.wrr-outcome-stat-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 0.35rem 0 0;
+  line-height: 1.4;
+}
+
 /* ── Free Launch Snapshot page ───────────────────────────── */
 
 .snapshot-hero h1 {
@@ -2796,5 +3116,35 @@ h3 {
     border-right: none;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--line);
+  }
+}
+
+/* ── WRR responsive overrides ────────────────────────────── */
+@media (max-width: 720px) {
+  .wrr-outcome-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wrr-site-svc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wrr-site-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wrr-site-hero {
+    padding: 1.5rem 1.1rem 1.25rem;
+  }
+
+  .wrr-site-services,
+  .wrr-site-contact {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  .wrr-site-nav {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
   }
 }
