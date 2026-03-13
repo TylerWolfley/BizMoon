@@ -82,3 +82,53 @@ document.addEventListener("click", () => {
     m.previousElementSibling.setAttribute("aria-expanded", "false");
   });
 });
+
+// ── Free Launch Snapshot form (Formspree, progressive enhancement) ──
+// Intercepts the form submit, sends via fetch, and shows inline success/error.
+// Falls back to a standard POST if JavaScript is unavailable.
+(function () {
+  var form = document.getElementById("launch-snapshot-form");
+  if (!form) return;
+
+  var successEl = document.getElementById("form-success");
+  var errorEl = document.getElementById("form-error");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    var submitBtn = form.querySelector(".snapshot-submit");
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending\u2026";
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    })
+      .then(function (response) {
+        if (response.ok) {
+          form.reset();
+          submitBtn.hidden = true;
+          if (errorEl) errorEl.hidden = true;
+          if (successEl) {
+            successEl.hidden = false;
+            successEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+        } else {
+          return response.json().then(function (json) {
+            throw new Error(json.error || "Submission failed");
+          });
+        }
+      })
+      .catch(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Request my free Launch Snapshot";
+        if (errorEl) errorEl.hidden = false;
+      });
+  });
+})();

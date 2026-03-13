@@ -281,7 +281,9 @@ main > section + section {
 .faq-section,
 .process-section,
 .contact-section,
-.legal-section {
+.legal-section,
+.snapshot-note-section,
+.cta-strip-section {
   padding: 3rem 0;
 }
 
@@ -1030,6 +1032,7 @@ h3 {
 }
 
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
   width: 100%;
   padding: 0.95rem 1rem;
@@ -1039,7 +1042,21 @@ h3 {
   color: var(--text-strong);
 }
 
+.contact-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235d6c81' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.contact-form select option[value=""][disabled] {
+  color: var(--muted);
+}
+
 .contact-form input:focus,
+.contact-form select:focus,
 .contact-form textarea:focus {
   outline: 2px solid rgba(23, 63, 120, 0.18);
   border-color: rgba(23, 63, 120, 0.28);
@@ -1894,7 +1911,197 @@ h3 {
 .wrr-cta-note     { padding-top: 0; border-top: none; }
 .wrr-cta-buttons  { display: grid; gap: 0.75rem; margin-top: 0.5rem; }
 
-@media (max-width: 1024px) {
+/* ── Free Launch Snapshot page ───────────────────────────── */
+
+.snapshot-hero h1 {
+  max-width: none;
+  font-size: clamp(2.45rem, 4.8vw, 3.65rem);
+}
+
+.snapshot-hero-support {
+  margin-top: 0.85rem;
+  max-width: 38rem;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.snapshot-hero-note {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-style: italic;
+}
+
+/* Wide centered form panel */
+.snapshot-form-panel {
+  display: grid;
+  gap: 2rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.snapshot-form-intro {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.snapshot-form-intro p:last-child {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.snapshot-form {
+  position: static;
+}
+
+/* Two-column row for paired fields */
+.snapshot-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Yes/No checklist fieldset */
+.snapshot-checklist {
+  margin: 0;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--accent-wash);
+}
+
+.snapshot-checklist legend {
+  padding: 0 0.35rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 500;
+}
+
+.snapshot-checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.85rem;
+  margin-top: 0.85rem;
+}
+
+.snapshot-check-item {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.snapshot-check-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.radio-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Form success and error states */
+.form-success,
+.form-error {
+  padding: 1.15rem 1.35rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.form-success {
+  background: rgba(23, 63, 120, 0.06);
+  border: 1px solid rgba(23, 63, 120, 0.2);
+  color: var(--text-strong);
+}
+
+.form-success-title {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.form-error {
+  background: rgba(200, 40, 40, 0.05);
+  border: 1px solid rgba(200, 40, 40, 0.2);
+  color: var(--text);
+}
+
+.form-error a {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Qualification note */
+.snapshot-note-section {
+  padding-top: 0;
+}
+
+.snapshot-note {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 1.1rem 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel-soft);
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+/* Final CTA strip */
+.cta-strip-section {
+  padding-bottom: 0;
+}
+
+.cta-strip {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 2.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(23, 63, 120, 0.05) 0%, var(--panel) 100%);
+}
+
+.cta-strip-copy h2 {
+  max-width: 28ch;
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  line-height: 1.15;
+}
+
+.cta-strip-action {
+  flex-shrink: 0;
+}
+
+.snapshot-submit {
+  width: 100%;
+  min-height: 3.25rem;
+  font-size: 1rem;
+}
+
+
   .hero,
   .page-hero,
   .contact-panel,
@@ -1909,7 +2116,9 @@ h3 {
   .output-previews,
   .founder-bio,
   .case-section,
-  .featured-launch-band {
+  .featured-launch-band,
+  .cta-strip,
+  .snapshot-form-row {
     grid-template-columns: 1fr;
   }
 
@@ -2056,7 +2265,9 @@ h3 {
   .process-section,
   .contact-section,
   .legal-section,
-  .featured-launch-section {
+  .featured-launch-section,
+  .snapshot-note-section,
+  .cta-strip-section {
     padding: 2.25rem 0;
   }
 
