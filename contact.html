@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact BizMoon | Start your launch</title>
   <meta name="description" content="Contact BizMoon to start your launch, ask about a package, or talk through the right fit for your business.">
@@ -146,19 +147,19 @@
             </p>
             <label>
               Name
-              <input type="text" name="name" placeholder="Your name" autocomplete="name" required>
+              <input type="text" name="name" placeholder="Your name" autocomplete="name" maxlength="100" required>
             </label>
             <label>
               Email
-              <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+              <input type="email" name="email" placeholder="you@example.com" autocomplete="email" maxlength="254" required>
             </label>
             <label>
               Which package are you considering?
-              <input type="text" name="package" placeholder="Starter, Launch, Moonshot, or not sure yet" autocomplete="off" required>
+              <input type="text" name="package" placeholder="Starter, Launch, Moonshot, or not sure yet" autocomplete="off" maxlength="50" required>
             </label>
             <label>
               What are you building?
-              <textarea name="message" rows="5" placeholder="Tell us what the business is, where you are in the process, and what you want live first." required></textarea>
+              <textarea name="message" rows="5" placeholder="Tell us what the business is, where you are in the process, and what you want live first." maxlength="2000" required></textarea>
             </label>
             <button class="button button-primary" type="submit">Send your inquiry</button>
             <p class="form-note">Project inquiries only. BizMoon uses the details you share to review package fit, scope, and next steps.</p>

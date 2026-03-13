@@ -1861,6 +1861,23 @@ h3 {
   padding-bottom: 1rem;
 }
 
+/* wind-river-renewal case study mockup helpers */
+.wrr-brand-grid   { display: grid; gap: 0.55rem; }
+.wrr-brand-name   { font-size: 1.05rem; font-weight: 700; color: var(--text-strong); letter-spacing: -0.02em; }
+.wrr-brand-sub    { font-size: 0.78rem; color: var(--muted); }
+.wrr-divider      { height: 1px; background: var(--line); }
+.wrr-brand-detail { font-size: 0.72rem; color: var(--muted); line-height: 1.55; }
+.wrr-detail-label { color: var(--text-strong); display: block; margin-bottom: 0.25rem; }
+.wrr-pg-bar       { margin-top: 0.65rem; height: 0.38rem; border-radius: 3px; background: var(--line); width: 45%; }
+.wrr-pg-grid      { margin-top: 0.3rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.3rem; }
+.wrr-pg-card      { height: 1.8rem; border-radius: 4px; background: var(--bg-soft); border: 1px solid var(--line); }
+.wrr-svc-grid     { display: grid; gap: 0.7rem; }
+.wrr-svc-item     { padding-bottom: 0.6rem; border-bottom: 1px solid var(--line); }
+.wrr-svc-name     { font-size: 0.76rem; font-weight: 700; color: var(--text-strong); }
+.wrr-svc-desc     { font-size: 0.66rem; color: var(--muted); margin-top: 0.2rem; line-height: 1.5; }
+.wrr-cta-note     { padding-top: 0; border-top: none; }
+.wrr-cta-buttons  { display: grid; gap: 0.75rem; margin-top: 0.5rem; }
+
 @media (max-width: 1024px) {
   .hero,
   .page-hero,
