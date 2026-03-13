@@ -410,6 +410,10 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.value-grid.four-up {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .faq-list {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -2101,7 +2105,7 @@ h3 {
   font-size: 1rem;
 }
 
-
+@media (max-width: 720px) {
   .hero,
   .page-hero,
   .contact-panel,
@@ -2109,6 +2113,7 @@ h3 {
   .package-grid,
   .faq-list,
   .value-grid,
+  .value-grid.four-up,
   .trust-grid,
   .value-grid.two-up,
   .faq-list-wide,
@@ -2195,6 +2200,10 @@ h3 {
   /* Mobile dropdowns: flat inline list, no floating panel */
   .nav-dropdown {
     width: 100%;
+  }
+
+  .value-grid.four-up {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .nav-dropdown-toggle {
