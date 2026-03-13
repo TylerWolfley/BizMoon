@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Featured Launch: Wind River Renewal | BizMoon</title>
   <meta
@@ -183,16 +184,16 @@
           <div class="case-section-visual">
             <p class="case-mockup-label">Brand overview</p>
             <div class="output-preview" aria-hidden="true">
-              <div style="display:grid;gap:0.55rem;">
-                <div style="font-size:1.05rem;font-weight:700;color:var(--text-strong);letter-spacing:-0.02em;">Wind River Renewal</div>
-                <div style="font-size:0.78rem;color:var(--muted);">Outdoor property care — Wind River Basin, WY</div>
-                <div style="height:1px;background:var(--line);"></div>
-                <div style="font-size:0.72rem;color:var(--muted);line-height:1.55;">
-                  <strong style="color:var(--text-strong);display:block;margin-bottom:0.25rem;">Tagline direction</strong>
+              <div class="wrr-brand-grid">
+                <div class="wrr-brand-name">Wind River Renewal</div>
+                <div class="wrr-brand-sub">Outdoor property care — Wind River Basin, WY</div>
+                <div class="wrr-divider"></div>
+                <div class="wrr-brand-detail">
+                  <strong class="wrr-detail-label">Tagline direction</strong>
                   Dependable outdoor care for your property.
                 </div>
-                <div style="font-size:0.72rem;color:var(--muted);line-height:1.55;">
-                  <strong style="color:var(--text-strong);display:block;margin-bottom:0.25rem;">Positioning</strong>
+                <div class="wrr-brand-detail">
+                  <strong class="wrr-detail-label">Positioning</strong>
                   Built for homeowners who need reliable, local outdoor property work done without the runaround.
                 </div>
               </div>
@@ -236,11 +237,11 @@
                 <div class="mockup-pg-block"></div>
                 <div class="mockup-pg-block short"></div>
                 <div class="mockup-pg-btn">Get a quote</div>
-                <div style="margin-top:0.65rem;height:0.38rem;border-radius:3px;background:var(--line);width:45%;"></div>
-                <div style="margin-top:0.3rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.3rem;">
-                  <div style="height:1.8rem;border-radius:4px;background:var(--bg-soft);border:1px solid var(--line);"></div>
-                  <div style="height:1.8rem;border-radius:4px;background:var(--bg-soft);border:1px solid var(--line);"></div>
-                  <div style="height:1.8rem;border-radius:4px;background:var(--bg-soft);border:1px solid var(--line);"></div>
+                <div class="wrr-pg-bar"></div>
+                <div class="wrr-pg-grid">
+                  <div class="wrr-pg-card"></div>
+                  <div class="wrr-pg-card"></div>
+                  <div class="wrr-pg-card"></div>
                 </div>
               </div>
             </div>
@@ -270,18 +271,18 @@
           <div class="case-section-visual">
             <p class="case-mockup-label">Service listing</p>
             <div class="output-preview" aria-hidden="true">
-              <div style="display:grid;gap:0.7rem;">
-                <div style="padding-bottom:0.6rem;border-bottom:1px solid var(--line);">
-                  <div style="font-size:0.76rem;font-weight:700;color:var(--text-strong);">Lawn Care &amp; Maintenance</div>
-                  <div style="font-size:0.66rem;color:var(--muted);margin-top:0.2rem;line-height:1.5;">Weekly or bi-weekly service. Consistent care, no missed visits.</div>
+              <div class="wrr-svc-grid">
+                <div class="wrr-svc-item">
+                  <div class="wrr-svc-name">Lawn Care &amp; Maintenance</div>
+                  <div class="wrr-svc-desc">Weekly or bi-weekly service. Consistent care, no missed visits.</div>
                 </div>
-                <div style="padding-bottom:0.6rem;border-bottom:1px solid var(--line);">
-                  <div style="font-size:0.76rem;font-weight:700;color:var(--text-strong);">Landscaping &amp; Yard Renewal</div>
-                  <div style="font-size:0.66rem;color:var(--muted);margin-top:0.2rem;line-height:1.5;">Design, install, and clean up. Your yard looking its best.</div>
+                <div class="wrr-svc-item">
+                  <div class="wrr-svc-name">Landscaping &amp; Yard Renewal</div>
+                  <div class="wrr-svc-desc">Design, install, and clean up. Your yard looking its best.</div>
                 </div>
                 <div>
-                  <div style="font-size:0.76rem;font-weight:700;color:var(--text-strong);">Property Cleanup</div>
-                  <div style="font-size:0.66rem;color:var(--muted);margin-top:0.2rem;line-height:1.5;">Seasonal and one-time cleanups. Scope set upfront, no surprises.</div>
+                  <div class="wrr-svc-name">Property Cleanup</div>
+                  <div class="wrr-svc-desc">Seasonal and one-time cleanups. Scope set upfront, no surprises.</div>
                 </div>
               </div>
             </div>
@@ -404,9 +405,9 @@
               </div>
             </div>
           </div>
-          <div class="hero-note page-note" style="padding-top:0;border-top:none;">
+          <div class="hero-note page-note wrr-cta-note">
             <p class="eyebrow">Packages</p>
-            <div style="display:grid;gap:0.75rem;margin-top:0.5rem;">
+            <div class="wrr-cta-buttons">
               <a class="button button-primary" href="launch.html">View the Launch Package</a>
               <a class="button button-secondary" href="compare.html">Compare all packages</a>
               <a class="button button-secondary" href="contact.html">Send an inquiry</a>
