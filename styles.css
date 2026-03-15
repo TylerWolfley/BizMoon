@@ -2937,3 +2937,44 @@ h3 {
     padding: 3.5rem 0;
   }
 }
+
+/* ================================
+   Package Promo Display
+   ================================ */
+
+.price-stack {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.promo-badge {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--accent);
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+.price-original {
+  font-size: 0.72em;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--muted);
+  line-height: 1.2;
+}
+
+.price-sale {
+  display: block;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--text-strong);
+  line-height: 1;
+}

@@ -88,7 +88,7 @@
           <article class="package-card">
             <p class="package-kicker">BizMoon Starter</p>
             <div class="package-topline">
-              <h3>$999</h3>
+              <h3 data-package="starter" data-base-price="999" data-price-type="package">$999</h3>
               <span>5 business days</span>
             </div>
             <p class="package-tag">Logo, website, email, and core setup — looking credible, fast.</p>
@@ -111,7 +111,7 @@
             <p class="feature-badge">Most popular — best fit for most businesses</p>
             <p class="package-kicker">BizMoon Launch</p>
             <div class="package-topline">
-              <h3>$1,499</h3>
+              <h3 data-package="launch" data-base-price="1499" data-price-type="package">$1,499</h3>
               <span>7 to 10 business days</span>
             </div>
             <p class="package-tag">Complete launch presence — brand, website, Google visibility, and tools.</p>
@@ -134,7 +134,7 @@
           <article class="package-card">
             <p class="package-kicker">BizMoon Moonshot</p>
             <div class="package-topline">
-              <h3>$2,499</h3>
+              <h3 data-package="moonshot" data-base-price="2499" data-price-type="package">$2,499</h3>
               <span>10 to 14 business days</span>
             </div>
             <p class="package-tag">Premium launch — full brand system, full site, and 30-day support.</p>
@@ -172,7 +172,7 @@
                 <th class="compare-th-pkg" scope="col">
                   <div class="compare-pkg-header">
                     <p class="compare-pkg-kicker">BizMoon Starter</p>
-                    <p class="compare-pkg-price">$999</p>
+                    <p class="compare-pkg-price" data-package="starter" data-base-price="999" data-price-type="package">$999</p>
                     <p class="compare-pkg-turnaround">5 business days</p>
                     <p class="compare-fit-pill">Get online fast</p>
                     <p class="compare-pkg-desc">Logo, website, email, and core setup</p>
@@ -183,7 +183,7 @@
                   <div class="compare-pkg-header">
                     <p class="compare-flagship-badge">Best for most</p>
                     <p class="compare-pkg-kicker">BizMoon Launch</p>
-                    <p class="compare-pkg-price">$1,499</p>
+                    <p class="compare-pkg-price" data-package="launch" data-base-price="1499" data-price-type="package">$1,499</p>
                     <p class="compare-pkg-turnaround">7 to 10 business days</p>
                     <p class="compare-pkg-desc">Complete brand, website, visibility, and tools</p>
                     <a class="button button-primary compare-cta" href="launch.html">View Launch</a>
@@ -192,7 +192,7 @@
                 <th class="compare-th-pkg" scope="col">
                   <div class="compare-pkg-header">
                     <p class="compare-pkg-kicker">BizMoon Moonshot</p>
-                    <p class="compare-pkg-price">$2,499</p>
+                    <p class="compare-pkg-price" data-package="moonshot" data-base-price="2499" data-price-type="package">$2,499</p>
                     <p class="compare-pkg-turnaround">10 to 14 business days</p>
                     <p class="compare-fit-pill">Premium launch system</p>
                     <p class="compare-pkg-desc">Full brand system, full site, and 30-day support</p>
@@ -547,6 +547,8 @@
       </div>
     </footer>
   </div>
+  <script src="assets/js/promo-config.js" defer></script>
+  <script src="assets/js/package-promo.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>
