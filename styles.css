@@ -1120,6 +1120,8 @@ h3 {
   grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.7fr);
   gap: 2.25rem;
   align-items: start;
+  padding-top: 3rem;    /* was 1.25rem via .hero — give the section room to land */
+  padding-bottom: 4rem; /* was 3rem — heavier break before the support section */
 }
 
 .home-hero .hero-copy {
@@ -1133,8 +1135,9 @@ h3 {
 }
 
 .home-hero .hero-text {
-  margin-top: 0.85rem;
-  max-width: 38rem;
+  margin-top: 1.1rem; /* was 0.85rem — more intentional gap after headline */
+  max-width: 36rem;   /* tightened from 38rem for better line length */
+  font-size: 1.05rem; /* slight scale bump for subheadline presence */
 }
 
 .home-hero .hero-logo-stage {
@@ -1143,6 +1146,16 @@ h3 {
 
 .home-hero .hero-note h2 {
   font-size: clamp(1.35rem, 2vw, 1.8rem);
+}
+
+/* Hero copy stack: more deliberate eyebrow separation */
+.home-hero .eyebrow {
+  margin-bottom: 1rem; /* was 0.75rem — creates a clearer pause before the headline */
+}
+
+/* Hero CTA group: more intentional gap from body copy */
+.home-hero .hero-actions {
+  margin-top: 2.25rem; /* was 1.5rem — the CTA group deserves its own breathing room */
 }
 
 .page-note {
@@ -2818,5 +2831,109 @@ h3 {
     border-right: none;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--line);
+  }
+}
+
+/* ── Homepage visual hierarchy refinements ──────────────────────────────
+ *
+ * CSS companion to the audit comment in index.html.
+ * Scoped to homepage-specific IDs and classes where the selectors are
+ * shared across pages. Changes to homepage-only classes (four-up,
+ * proof-block, proof-section) are made inline in their original rules.
+ *
+ * ─────────────────────────────────────────────────────────────────────── */
+
+/* ── Value cards (four-up): contained, scannable, not flat ── */
+
+.value-grid.four-up {
+  gap: 1.25rem;
+}
+
+.value-grid.four-up article {
+  padding: 1.5rem 1.35rem;      /* pad all sides — not just top */
+  border-top: 2px solid var(--line-strong); /* stronger cap for visual anchor */
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  box-shadow: 0 2px 10px rgba(11, 26, 47, 0.04); /* barely-there lift */
+}
+
+.value-grid.four-up h3 {
+  font-size: 1.1rem;    /* was 1.2rem — slightly reduced but now more distinct */
+  line-height: 1.2;     /* tighter for heading weight */
+  margin-bottom: 0.5rem;
+}
+
+/* ── Proof section: landmark treatment, not generic strip ── */
+
+.proof-section {
+  padding: 4.5rem 0; /* was 3rem — Wind River Renewal deserves room to breathe */
+}
+
+.proof-block {
+  background: linear-gradient(160deg, rgba(23, 63, 120, 0.04) 0%, var(--panel) 55%);
+  border-color: var(--line-strong); /* was var(--line) — slightly stronger definition */
+  box-shadow: 0 24px 56px rgba(11, 26, 47, 0.08); /* lifted shadow for prominence */
+}
+
+.proof-name {
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem); /* was 1.2–1.55rem — bolder client identity */
+}
+
+/* ── Section rhythm: intentional, not accidental ── */
+
+#what-you-get {
+  padding-top: 2.5rem;    /* tighter top — support section under the hero */
+  padding-bottom: 3.5rem;
+}
+
+#how-every-build {
+  padding: 3.5rem 0;
+}
+
+/* ── Packages section: premium, scannable, expensive-feeling ── */
+
+#packages {
+  padding: 5rem 0; /* was 3rem — primary conversion section deserves the most space */
+}
+
+#packages .section-heading {
+  margin-bottom: 2.75rem; /* was 1.75rem — clear gap before the comparison grid */
+}
+
+#packages .package-grid {
+  gap: 1.5rem; /* was 1.25rem — more air between cards */
+}
+
+#packages .package-card {
+  padding: 2rem;         /* was 1.65rem — more generous interior spacing */
+  gap: 1.25rem;          /* was 1rem — slightly more separation between card rows */
+  border-radius: 20px;   /* was 16px — softer, more premium corner radius */
+}
+
+#packages .package-topline {
+  padding-bottom: 1.1rem;                /* new: separates price from description */
+  border-bottom: 1px solid var(--line);  /* new: clear visual break within card */
+}
+
+/* Responsive: maintain tighter padding on narrow viewports */
+@media (max-width: 720px) {
+  #packages .package-card {
+    padding: 1.35rem;    /* overrides the 2rem at small sizes */
+    border-radius: 14px; /* softer than desktop 20px, appropriate at small sizes */
+  }
+
+  .value-grid.four-up article {
+    border-radius: 10px;
+  }
+
+  .proof-section {
+    padding: 3rem 0;
+  }
+
+  #packages {
+    padding: 3.5rem 0;
   }
 }
