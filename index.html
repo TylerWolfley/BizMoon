@@ -81,6 +81,48 @@
 
     <main id="top" tabindex="-1">
 
+      <!--
+        HOMEPAGE VISUAL HIERARCHY AUDIT — top 5 issues
+        ─────────────────────────────────────────────────────────────────────────
+
+        1. HERO BREATHING ROOM
+           The hero padding-top is overridden to 1.25rem by the .hero rule,
+           which makes the section feel cramped immediately after the sticky nav.
+           The headline doesn't have room to land — the page starts too soon.
+
+        2. HERO COPY STACK RHYTHM
+           The gaps between eyebrow → h1 → subheadline → CTA group are
+           inconsistent. The CTA buttons sit too close to the body copy
+           (margin-top: 1.5rem) and the eyebrow margin-bottom (0.75rem) is too
+           similar in weight to the headline-to-body gap. Nothing feels
+           deliberately composed.
+
+        3. VALUE CARDS ARE FLAT AND UNDIFFERENTIATED
+           The four-up value cards use a border-top-only treatment (border-top:
+           1px solid var(--line); padding-top: 1rem). There's no visual
+           containment — no background, no bounding box, no depth. Scanning
+           four items at a glance is harder than it needs to be and the cards
+           feel like they're resting on a grid, not presented as distinct items.
+
+        4. PROOF SECTION HAS NO LANDMARK WEIGHT
+           The Wind River Renewal block uses the same 3rem section padding as
+           every other content section. It doesn't stand out as proof — it reads
+           like any other informational strip. The proof-block's background is
+           too subtle and the client name lacks sufficient typographic scale
+           to signal authority.
+
+        5. PACKAGE CARDS READ AS FUNCTIONAL, NOT PREMIUM
+           The package card padding (1.65rem) and inter-card gap (1.25rem) are
+           too conservative for price points in the $999–$2,499 range. The
+           section heading sits too close to the cards (margin-bottom: 1.75rem).
+           No visual separation between the price/timeline header and the
+           feature list weakens the hierarchy within each card.
+
+        Refinements implemented via CSS below — see the
+        "Homepage visual hierarchy refinements" section in styles.css.
+        ─────────────────────────────────────────────────────────────────────────
+      -->
+
       <!-- HERO -->
       <!--
         Hero copy options — progressively stronger from safe to bold.
