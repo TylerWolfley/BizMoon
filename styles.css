@@ -2785,6 +2785,28 @@ h3 {
   text-underline-offset: 3px;
 }
 
+/* ── Proof highlights — compact delivery fact tags ──────────── */
+
+.proof-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.proof-highlights li {
+  display: inline-flex;
+  padding: 0.22rem 0.65rem;
+  background: var(--accent-wash);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-strong);
+}
+
 @media (max-width: 720px) {
   .proof-block {
     grid-template-columns: 1fr;
