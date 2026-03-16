@@ -1,0 +1,11 @@
+{
+  "name": "bizmoon",
+  "version": "1.0.0",
+  "description": "BizMoon — done-for-you launch setup for entrepreneurs and new businesses",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}
