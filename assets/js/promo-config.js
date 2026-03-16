@@ -28,7 +28,7 @@
   // Fetch live promo state from the Netlify Function (same-origin, no CSP change needed)
   fetch("/.netlify/functions/promo-state")
     .then(function (response) {
-      if (!response.ok) throw new Error("promo-state: " + response.status);
+      if (!response.ok) throw new Error("Failed to fetch promo state (" + response.status + ")");
       return response.json();
     })
     .then(function (data) {

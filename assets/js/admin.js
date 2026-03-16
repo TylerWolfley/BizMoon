@@ -105,7 +105,7 @@
       if (!span) return;
       if (isActive && !isNaN(pct) && pct >= 1 && pct <= 99) {
         var sale = Math.round(pkg.base * (1 - pct / 100) * 100) / 100;
-        span.textContent = fmtFull.format(pkg.base) + " \u2192 " + fmtSale.format(sale);
+        span.textContent = fmtFull.format(pkg.base) + " → " + fmtSale.format(sale);
       } else {
         span.textContent = fmtFull.format(pkg.base);
       }
@@ -119,7 +119,7 @@
     statusBadge.textContent = active ? "Active" : "Inactive";
     statusBadge.setAttribute("data-active", active ? "true" : "false");
     statusDetail.textContent = active
-      ? (promo.percentOff + "% off \u2014 \u201C" + promo.label + "\u201D")
+      ? (promo.percentOff + "% off — "" + promo.label + """)
       : "No sale running";
   }
 
@@ -181,7 +181,7 @@
     }
 
     loginBtn.disabled = true;
-    loginBtn.textContent = "Logging in\u2026";
+    loginBtn.textContent = "Logging in…";
 
     fetch("/.netlify/functions/admin-login", {
       method: "POST",
@@ -240,7 +240,7 @@
     }
 
     saveBtn.disabled = true;
-    saveBtn.textContent = "Saving\u2026";
+    saveBtn.textContent = "Saving…";
 
     fetch("/.netlify/functions/admin-update-promo", {
       method: "POST",
