@@ -76,8 +76,9 @@ function verifySessionToken(token, secret) {
     return null;
   }
 
-  // Check expiry
+  // Check expiry and required payload shape
   if (payload.exp && Math.floor(Date.now() / 1000) > payload.exp) return null;
+  if (payload.sub !== "admin") return null;
 
   return payload;
 }

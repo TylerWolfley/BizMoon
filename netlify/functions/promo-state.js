@@ -11,27 +11,7 @@
 "use strict";
 
 const { getStore } = require("@netlify/blobs");
-
-const DEFAULT_PROMO = {
-  active: false,
-  percentOff: 50,
-  label: "50% off",
-};
-
-/** Validate that a promo object has acceptable shape and values. */
-function isValidPromo(obj) {
-  return (
-    obj !== null &&
-    typeof obj === "object" &&
-    typeof obj.active === "boolean" &&
-    typeof obj.percentOff === "number" &&
-    obj.percentOff >= 1 &&
-    obj.percentOff <= 99 &&
-    typeof obj.label === "string" &&
-    obj.label.length > 0 &&
-    obj.label.length <= 80
-  );
-}
+const { DEFAULT_PROMO, isValidPromo } = require("./_promo");
 
 exports.handler = async function handler(event) {
   // Only GET is supported
@@ -60,8 +40,7 @@ exports.handler = async function handler(event) {
     statusCode: 200,
     headers: {
       "Content-Type": "application/json",
-      // Allow public caching for a short time; CDN edge workers revalidate quickly
-      "Cache-Control": "public, max-age=30, stale-while-revalidate=60",
+      "Cache-Control": "no-store",
     },
     body: JSON.stringify(promo),
   };
