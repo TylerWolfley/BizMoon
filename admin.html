@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BizMoon Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#173f78">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header admin-header">
+      <a class="brand" href="index.html" aria-label="BizMoon home">
+        <img class="brand-logo" src="assets/images/bizmoon-logo-mark.png" alt="BizMoon logo" width="48" height="48">
+        <span class="brand-copy">
+          <span class="brand-name">BizMoon</span>
+          <span class="brand-tagline">admin</span>
+        </span>
+      </a>
+      <button
+        id="admin-logout-btn"
+        class="button button-secondary admin-logout"
+        type="button"
+        hidden
+        aria-label="Log out of BizMoon admin"
+      >Log out</button>
+    </header>
+
+    <main id="top" tabindex="-1">
+
+      <!-- Session check loading state -->
+      <div id="admin-loading" class="admin-loading" aria-live="polite">
+        <p class="admin-status-text">Checking session&hellip;</p>
+      </div>
+
+      <!-- Login panel (shown when not authenticated) -->
+      <section id="admin-login-section" class="admin-section" hidden aria-label="Admin login">
+        <div class="admin-card">
+          <p class="eyebrow">BizMoon Control Panel</p>
+          <h1 class="admin-heading">Owner login</h1>
+          <p class="admin-intro">Private access only. Enter your admin password to manage the active sale.</p>
+
+          <form id="admin-login-form" class="contact-form admin-form" novalidate aria-label="Admin login form">
+            <label>
+              Password
+              <input
+                id="admin-password-input"
+                type="password"
+                name="password"
+                placeholder="Admin password"
+                autocomplete="current-password"
+                required
+              >
+            </label>
+            <div id="admin-login-error" class="admin-error" hidden role="alert"></div>
+            <button class="button button-primary" type="submit" id="admin-login-btn">Log in</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Promo control panel (shown when authenticated) -->
+      <section id="admin-panel-section" class="admin-section" hidden aria-label="Promo control panel">
+        <div class="admin-card">
+          <p class="eyebrow">BizMoon Control Panel</p>
+          <h1 class="admin-heading">Sale toggle</h1>
+          <p class="admin-intro">Changes take effect for all site visitors immediately after saving.</p>
+
+          <!-- Current state summary -->
+          <div id="admin-promo-status" class="admin-promo-status" aria-live="polite">
+            <span id="admin-status-badge" class="admin-status-badge" data-active="false">Inactive</span>
+            <span id="admin-status-detail" class="admin-status-detail"></span>
+          </div>
+
+          <form id="admin-promo-form" class="contact-form admin-form" novalidate aria-label="Edit promo settings">
+            <label class="admin-toggle-label">
+              <span class="admin-toggle-text">Sale active</span>
+              <span class="admin-toggle-switch" aria-hidden="true">
+                <input
+                  id="admin-active-toggle"
+                  type="checkbox"
+                  name="active"
+                  role="switch"
+                  aria-checked="false"
+                >
+                <span class="admin-toggle-track"></span>
+              </span>
+            </label>
+
+            <label>
+              Discount (%)
+              <input
+                id="admin-percent-input"
+                type="number"
+                name="percentOff"
+                min="1"
+                max="99"
+                step="1"
+                placeholder="50"
+                required
+              >
+            </label>
+
+            <label>
+              Promo label
+              <input
+                id="admin-label-input"
+                type="text"
+                name="label"
+                maxlength="80"
+                placeholder="50% off"
+                required
+              >
+            </label>
+
+            <div id="admin-promo-error" class="admin-error" hidden role="alert"></div>
+            <div id="admin-promo-success" class="admin-success" hidden role="status"></div>
+
+            <div class="admin-actions">
+              <button class="button button-primary" type="submit" id="admin-save-btn">Save changes</button>
+            </div>
+          </form>
+
+          <!-- Live preview of calculated prices -->
+          <div class="admin-preview" aria-label="Price preview">
+            <p class="admin-preview-label">Price preview</p>
+            <ul class="admin-preview-list" id="admin-preview-list">
+              <li>Starter &mdash; <span data-preview="starter"></span></li>
+              <li>Launch &mdash; <span data-preview="launch"></span></li>
+              <li>Moonshot &mdash; <span data-preview="moonshot"></span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> BizMoon</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/admin.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
