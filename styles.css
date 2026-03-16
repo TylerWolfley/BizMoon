@@ -281,7 +281,6 @@ main > section + section {
 .process-section,
 .contact-section,
 .legal-section,
-.proof-section,
 .snapshot-note-section,
 .cta-strip-section {
   padding: 3rem 0;
@@ -2261,8 +2260,6 @@ h3 {
   .process-section,
   .contact-section,
   .legal-section,
-  .proof-section,
-  .featured-launch-section,
   .snapshot-note-section,
   .cta-strip-section {
     padding: 2.25rem 0;
@@ -2719,127 +2716,11 @@ h3 {
   }
 }
 
-/* ── Homepage proof block ────────────────────────────────── */
-
-.proof-section {
-  padding: 3rem 0;
-}
-
-.proof-block {
-  display: grid;
-  grid-template-columns: minmax(0, 0.6fr) minmax(0, 1.4fr);
-  gap: 2.5rem;
-  align-items: start;
-  padding: 2rem 2.25rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--panel);
-  box-shadow: var(--shadow-soft);
-}
-
-.proof-meta {
-  display: grid;
-  gap: 0.35rem;
-  padding-right: 1rem;
-  border-right: 1px solid var(--line);
-}
-
-.proof-name {
-  margin: 0;
-  font-size: clamp(1.2rem, 2vw, 1.55rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  color: var(--text-strong);
-  line-height: 1.1;
-}
-
-.proof-type {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.88rem;
-}
-
-.proof-package {
-  margin: 0.35rem 0 0;
-  display: inline-flex;
-  padding: 0.2rem 0.6rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 0.74rem;
-  font-weight: 600;
-  color: var(--accent);
-  background: var(--accent-wash);
-  width: fit-content;
-}
-
-.proof-details {
-  display: grid;
-  gap: 0.85rem;
-  align-content: start;
-}
-
-.proof-outcome {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.7;
-  font-size: 0.97rem;
-}
-
-.proof-link {
-  color: var(--accent);
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.proof-link:hover,
-.proof-link:focus-visible {
-  color: var(--button-hover);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* ── Proof highlights — compact delivery fact tags ──────────── */
-
-.proof-highlights {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.proof-highlights li {
-  display: inline-flex;
-  padding: 0.22rem 0.65rem;
-  background: var(--accent-wash);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--text-strong);
-}
-
-@media (max-width: 720px) {
-  .proof-block {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .proof-meta {
-    padding-right: 0;
-    border-right: none;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--line);
-  }
-}
-
 /* ── Homepage visual hierarchy refinements ──────────────────────────────
  *
  * CSS companion to the audit comment in index.html.
  * Scoped to homepage-specific IDs and classes where the selectors are
- * shared across pages. Changes to homepage-only classes (four-up,
- * proof-block, proof-section) are made inline in their original rules.
+ * shared across pages.
  *
  * ─────────────────────────────────────────────────────────────────────── */
 
@@ -2866,22 +2747,6 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
-/* ── Proof section: landmark treatment, not generic strip ── */
-
-.proof-section {
-  padding: 4.5rem 0; /* was 3rem — Wind River Renewal deserves room to breathe */
-}
-
-.proof-block {
-  background: linear-gradient(160deg, rgba(23, 63, 120, 0.04) 0%, var(--panel) 55%);
-  border-color: var(--line-strong); /* was var(--line) — slightly stronger definition */
-  box-shadow: 0 24px 56px rgba(11, 26, 47, 0.08); /* lifted shadow for prominence */
-}
-
-.proof-name {
-  font-size: clamp(1.4rem, 2.2vw, 1.8rem); /* was 1.2–1.55rem — bolder client identity */
-}
-
 /* ── Section rhythm: intentional, not accidental ── */
 
 #what-you-get {
@@ -2889,8 +2754,47 @@ h3 {
   padding-bottom: 3.5rem;
 }
 
+#what-bizmoon-sets-up {
+  padding: 3.5rem 0;
+}
+
 #how-every-build {
   padding: 3.5rem 0;
+}
+
+/* ── What BizMoon sets up — offer-clarity section ────────── */
+
+.setup-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.setup-grid article {
+  padding: 1.25rem 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--accent-wash);
+}
+
+.setup-grid h3 {
+  font-size: 1.05rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.setup-closing {
+  max-width: 52rem;
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.setup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 /* ── Packages section: premium, scannable, expensive-feeling ── */
@@ -2929,8 +2833,8 @@ h3 {
     border-radius: 10px;
   }
 
-  .proof-section {
-    padding: 3rem 0;
+  .setup-grid {
+    grid-template-columns: 1fr;
   }
 
   #packages {
