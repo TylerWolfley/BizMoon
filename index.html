@@ -84,13 +84,13 @@
     <main id="top" tabindex="-1">
 
       <!--
-        HOMEPAGE VISUAL HIERARCHY AUDIT — top 4 issues
+        HOMEPAGE VISUAL HIERARCHY AUDIT: top 4 issues
         ─────────────────────────────────────────────────────────────────────────
 
         1. HERO BREATHING ROOM
            The hero padding-top is overridden to 1.25rem by the .hero rule,
            which makes the section feel cramped immediately after the sticky nav.
-           The headline doesn't have room to land — the page starts too soon.
+           The headline doesn't have room to land, the page starts too soon.
 
         2. HERO COPY STACK RHYTHM
            The gaps between eyebrow → h1 → subheadline → CTA group are
@@ -102,62 +102,62 @@
         3. VALUE CARDS ARE FLAT AND UNDIFFERENTIATED
            The four-up value cards use a border-top-only treatment (border-top:
            1px solid var(--line); padding-top: 1rem). There's no visual
-           containment — no background, no bounding box, no depth. Scanning
+           containment, no background, no bounding box, no depth. Scanning
            four items at a glance is harder than it needs to be and the cards
            feel like they're resting on a grid, not presented as distinct items.
 
         4. PACKAGE CARDS READ AS FUNCTIONAL, NOT PREMIUM
            The package card padding (1.65rem) and inter-card gap (1.25rem) are
-           too conservative for price points in the $999–$2,499 range. The
+           too conservative for price points in the $999-$2,499 range. The
            section heading sits too close to the cards (margin-bottom: 1.75rem).
            No visual separation between the price/timeline header and the
            feature list weakens the hierarchy within each card.
 
-        Refinements implemented via CSS below — see the
+        Refinements implemented via CSS below, see the
         "Homepage visual hierarchy refinements" section in styles.css.
         ─────────────────────────────────────────────────────────────────────────
       -->
 
       <!-- HERO -->
       <!--
-        Hero copy options — progressively stronger from safe to bold.
+        Hero copy options, progressively stronger from safe to bold.
 
         Option 1 (Safe):
           Headline: "Your business, built right and ready to launch."
-          Subheadline: "We take your new business from idea to online presence — with a professional
+          Subheadline: "We take your new business from idea to online presence, with a professional
                         website, brand, and Google profile all done for you."
 
         Option 2 (Slightly stronger):
           Headline: "Launch your business looking like you've been doing this for years."
-          Subheadline: "BizMoon builds your website, brand, and Google presence — so your first
+          Subheadline: "BizMoon builds your website, brand, and Google presence, so your first
                         impression is a credible one."
 
         Option 3 (Transformation-focused):
-          Headline: "Your business deserves a real launch — not a rushed one."
+          Headline: "Your business deserves a real launch, not a rushed one."
           Subheadline: "We build the website, brand, and online presence that makes customers
                         trust you from day one."
 
         Option 4 (Stronger, premium feel):
-          Headline: "Go from idea to credible business — without doing it yourself."
+          Headline: "Go from idea to credible business, without doing it yourself."
           Subheadline: "We handle your website, brand identity, and Google Business Profile
                         so you show up sharp, ready, and worth hiring."
 
         Option 5 (Bold and premium):
           Headline: "Your business, built to look like it's been here all along."
-          Subheadline: "We launch your website, brand, and Google presence together — so you
+          Subheadline: "We launch your website, brand, and Google presence together, so you
                         show up credible from the very first search."
 
-        Option 6 (Boldest — chosen):
+        Option 6 (Boldest, chosen):
           Headline: "Launch a business that looks established from day one."
           Subheadline: "We build your website, brand identity, and Google presence as a complete
-                        package — so customers find you, trust you, and reach out."
+                        package, so customers find you, trust you, and reach out."
       -->
       <section class="hero home-hero">
         <div class="hero-copy">
           <p class="eyebrow">Done-for-you business launch</p>
-          <h1>Website, brand, and Google setup — done before you open.</h1>
+          <h1>Website, brand, and Google setup, done before you open.</h1>
           <p class="hero-text">
-            We handle the pieces most new businesses figure out after launch — domain connection, branded email, Google Business Profile, and brand files — so everything is in place when you open.
+            We handle the pieces most new businesses figure out after launch: domain connection, branded email, Google Business Profile, and brand files, so everything is in place when you open.
           </p>
 
           <div class="hero-actions">
@@ -181,21 +181,21 @@
           <div class="section-heading">
             <p class="eyebrow">Selected Launches</p>
             <h2>The work, not just the pitch.</h2>
-            <p>A mix of live client work, concept builds, and demo projects — shown to make the standard clear, not to inflate a client list.</p>
+            <p>A mix of live client work, concept builds, and demo projects, shown to make the standard clear, not to inflate a client list.</p>
           </div>
         </div>
 
         <div class="launch-grid">
 
-          <!-- Wind River Renewal — Live business (anchor card) -->
-          <article class="launch-card launch-card--lead">
+          <!-- Wind River Renewal - Live business -->
+          <article class="launch-card">
             <div class="launch-image-area">
               <img src="assets/images/wrrss.png" alt="Wind River Renewal website preview">
             </div>
             <div class="launch-card-content">
               <p class="launch-badge launch-badge--live">Live business</p>
               <h3 class="launch-name">Wind River Renewal</h3>
-              <p class="launch-summary">A live site for a home energy contractor — built to explain the offer, surface the service area, and move visitors toward a quote request.</p>
+              <p class="launch-summary">A live site for a home energy contractor, built to explain the offer, surface the service area, and move visitors toward a quote request.</p>
               <ul class="launch-bullets">
                 <li>Clear service positioning for a local market</li>
                 <li>Quote CTA visible above the fold</li>
@@ -208,7 +208,7 @@
             </div>
           </article>
 
-          <!-- Wind River Trading Co. — Concept build -->
+          <!-- Wind River Trading Co. - Concept build -->
           <article class="launch-card">
             <div class="launch-image-area">
               <img src="assets/images/wrtss.png" alt="Wind River Trading Co. concept preview">
@@ -216,7 +216,7 @@
             <div class="launch-card-content">
               <p class="launch-badge launch-badge--concept">Concept build</p>
               <h3 class="launch-name">Wind River Trading Co.</h3>
-              <p class="launch-summary">A concept build for a western retail brand — stripped down from a cluttered template to a cleaner, brand-first layout.</p>
+              <p class="launch-summary">A concept build for a western retail brand, stripped down from a cluttered template to a cleaner, brand-first layout.</p>
               <ul class="launch-bullets">
                 <li>Homepage rebuilt to lead with brand story, not product inventory</li>
                 <li>Navigation simplified to reduce clicks before contact</li>
@@ -226,7 +226,7 @@
             </div>
           </article>
 
-          <!-- Bar 10 — Hospitality concept -->
+          <!-- Bar 10 - Hospitality concept -->
           <article class="launch-card">
             <div class="launch-image-area">
               <img src="assets/images/bar10ss.png" alt="Bar 10 hospitality concept preview">
@@ -234,46 +234,12 @@
             <div class="launch-card-content">
               <p class="launch-badge launch-badge--hospitality">Hospitality concept</p>
               <h3 class="launch-name">Bar 10</h3>
-              <p class="launch-summary">A concept build for a local bar — built around the menu, the hours, and getting a mobile visitor to the information they need fast.</p>
+              <p class="launch-summary">A concept build for a local bar, built around the menu, the hours, and getting a mobile visitor to the information they need fast.</p>
               <ul class="launch-bullets">
                 <li>Menu layout rebuilt for easier reading on mobile</li>
                 <li>Visual atmosphere aligned to the venue's character</li>
                 <li>Hours, location, and contact surfaced near the top</li>
                 <li>Reduced scroll before a customer could act</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Demo Launch 01 — Ridgeline Home Services -->
-          <!-- Screenshot: drop asset at assets/images/demo-launch-01-preview.jpg (16:9, min 800px wide) -->
-          <article class="launch-card">
-            <div class="launch-image-area" role="img" aria-label="Ridgeline Home Services demo launch preview"></div>
-            <div class="launch-card-content">
-              <p class="launch-badge launch-badge--demo">Demo launch</p>
-              <h3 class="launch-name">Ridgeline Home Services</h3>
-              <p class="launch-summary">A demo build for a residential contractor — showing how a new business gets a working homepage, service pages, and a quote form set up from day one.</p>
-              <ul class="launch-bullets">
-                <li>Homepage structured to answer who and what before asking for contact</li>
-                <li>Service descriptions written to the homeowner, not the operator</li>
-                <li>Quote CTA placed at every natural pause point in the page</li>
-                <li>Contact path kept short — no unnecessary steps between interest and inquiry</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Demo Launch 02 — The Hearth & Co. -->
-          <!-- Screenshot: drop asset at assets/images/demo-launch-02-preview.jpg (16:9, min 800px wide) -->
-          <article class="launch-card">
-            <div class="launch-image-area" role="img" aria-label="The Hearth &amp; Co. demo launch preview"></div>
-            <div class="launch-card-content">
-              <p class="launch-badge launch-badge--demo">Demo launch</p>
-              <h3 class="launch-name">The Hearth &amp; Co.</h3>
-              <p class="launch-summary">A demo build for a home goods brand — showing how a new retail concept gets a structured homepage, a browsable product section, and a clear path to shop.</p>
-              <ul class="launch-bullets">
-                <li>Brand direction set for a warm, lifestyle-oriented retail customer</li>
-                <li>Landing page built to introduce the brand before the product catalog</li>
-                <li>Product display built for mobile browsing first</li>
-                <li>Copy written to the shopper, not the product list</li>
               </ul>
             </div>
           </article>
@@ -285,8 +251,8 @@
       <section class="value-section" id="what-bizmoon-sets-up">
         <div class="section-heading">
           <p class="eyebrow">What BizMoon sets up</p>
-          <h2>Six pieces, done together — so nothing gets left for later.</h2>
-          <p>BizMoon handles the pieces that usually end up at five different vendors — domain registrar, website builder, email host, brand designer, Google setup — done as one connected handoff.</p>
+          <h2>Six pieces, done together, so nothing gets left for later.</h2>
+          <p>BizMoon handles the pieces that usually end up at five different vendors: domain registrar, website builder, email host, brand designer, Google setup, done as one connected handoff.</p>
         </div>
         <div class="setup-grid">
           <article>
@@ -325,14 +291,14 @@
       <!--
         Outcome-based rewrite strategy: Section heading refined to make "not just a website"
         feel like a promise of completeness, not a product disclaimer. Package blurbs rewritten
-        so each feels like a stage of readiness rather than a summary of deliverables —
+        so each feels like a stage of readiness rather than a summary of deliverables,
         Starter as the credible foundation, Launch as the full opening, Moonshot as the most
         complete and supported version.
       -->
       <section class="packages-section" id="packages">
         <div class="section-heading">
           <p class="eyebrow">Packages</p>
-          <h2>Three packages — website only, or the full launch setup.</h2>
+          <h2>Three packages: website only, or the full launch setup.</h2>
         </div>
 
         <div class="package-grid-scroll">
@@ -343,7 +309,7 @@
               <h3 data-package="starter" data-base-price="999" data-price-type="package">$999</h3>
               <span>5 business days</span>
             </div>
-            <p class="package-tag">A real website, your own domain, and a working email address — built clean and handed off in five days.</p>
+            <p class="package-tag">A real website, your own domain, and a working email address, built clean and handed off in five days.</p>
             <ul class="feature-list">
               <li>Logo and favicon</li>
               <li>Domain purchase and connection</li>
@@ -362,7 +328,7 @@
               <h3 data-package="launch" data-base-price="1499" data-price-type="package">$1,499</h3>
               <span>7 to 10 business days</span>
             </div>
-            <p class="package-tag">Website, brand assets, email, and Google Business Profile — set up as a connected package with a handoff folder included.</p>
+            <p class="package-tag">Website, brand assets, email, and Google Business Profile, set up as a connected package with a handoff folder included.</p>
             <ul class="feature-list">
               <li>Logo, favicon, and brand assets</li>
               <li>Domain, branded email, and DNS setup</li>
@@ -381,7 +347,7 @@
               <h3 data-package="moonshot" data-base-price="2499" data-price-type="package">$2,499</h3>
               <span>10 to 14 business days</span>
             </div>
-            <p class="package-tag">More pages, a deeper brand build, and a documented 30-day checklist — for new businesses that want a thorough starting point.</p>
+            <p class="package-tag">More pages, a deeper brand build, and a documented 30-day checklist for new businesses that want a thorough starting point.</p>
             <ul class="feature-list">
               <li>Logo files, brand colors, and type specs ready for use</li>
               <li>Up to 7-page website with service-page structure</li>
