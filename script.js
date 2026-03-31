@@ -132,3 +132,60 @@ document.addEventListener("click", () => {
       });
   });
 })();
+
+// ── Scroll-reveal (progressive enhancement) ──
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var revealSelector = [
+    '.value-grid.four-up article',
+    '.setup-grid article',
+    '.package-card',
+    '.trust-grid article',
+    '.faq-list article',
+    '.addon-card',
+    '.deliverable-card',
+    '.output-preview',
+    '.orbit-step',
+    '.featured-launch-band',
+    '.cta-strip',
+  ].join(', ');
+
+  var els = document.querySelectorAll(revealSelector);
+  if (!els.length) return;
+
+  // Stagger delays only for elements that are part of the reveal set
+  var elsSet = new Set(els);
+  document.querySelectorAll('.value-grid, .setup-grid, .package-grid, .addon-card-grid, .deliverable-grid, .orbit-plan-grid').forEach(function (grid) {
+    grid.querySelectorAll('article, .package-card, .addon-card, .deliverable-card').forEach(function (card, i) {
+      if (elsSet.has(card)) {
+        card.style.transitionDelay = (i * 0.07) + 's';
+      }
+    });
+  });
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        // Clear the stagger delay after the transform transition completes
+        // so subsequent hover transitions are instant
+        var target = entry.target;
+        function onRevealEnd(e) {
+          if (e.propertyName === 'transform') {
+            target.style.transitionDelay = '';
+            target.removeEventListener('transitionend', onRevealEnd);
+          }
+        }
+        target.addEventListener('transitionend', onRevealEnd);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.07, rootMargin: '0px 0px -24px 0px' });
+
+  els.forEach(function (el) {
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+})();
