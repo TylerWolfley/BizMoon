@@ -83,6 +83,27 @@ document.addEventListener("click", () => {
   });
 });
 
+// ── Header scroll state ─────────────────────────────────────────────────────
+// Adds .is-scrolled to the sticky header once the user scrolls past the
+// fold threshold, triggering a tighter, more opaque scrolled style.
+(function () {
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+
+  var threshold = 36; // px — roughly one header height; fires before hero copy scrolls out of view
+
+  function syncScrolled() {
+    if (window.scrollY > threshold) {
+      header.classList.add('is-scrolled');
+    } else {
+      header.classList.remove('is-scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', syncScrolled, { passive: true });
+  syncScrolled(); // sync on load (e.g. when page is refreshed mid-scroll)
+})();
+
 // ── Free Launch Snapshot form (Formspree, progressive enhancement) ──
 // Intercepts the form submit, sends via fetch, and shows inline success/error.
 // Falls back to a standard POST if JavaScript is unavailable.
@@ -150,6 +171,7 @@ document.addEventListener("click", () => {
     '.orbit-step',
     '.featured-launch-band',
     '.cta-strip',
+    '.launch-card',
   ].join(', ');
 
   var els = document.querySelectorAll(revealSelector);
@@ -157,8 +179,8 @@ document.addEventListener("click", () => {
 
   // Stagger delays only for elements that are part of the reveal set
   var elsSet = new Set(els);
-  document.querySelectorAll('.value-grid, .setup-grid, .package-grid, .addon-card-grid, .deliverable-grid, .orbit-plan-grid').forEach(function (grid) {
-    grid.querySelectorAll('article, .package-card, .addon-card, .deliverable-card').forEach(function (card, i) {
+  document.querySelectorAll('.value-grid, .setup-grid, .package-grid, .addon-card-grid, .deliverable-grid, .orbit-plan-grid, .launch-grid').forEach(function (grid) {
+    grid.querySelectorAll('article, .package-card, .addon-card, .deliverable-card, .launch-card').forEach(function (card, i) {
       if (elsSet.has(card)) {
         card.style.transitionDelay = (i * 0.07) + 's';
       }
