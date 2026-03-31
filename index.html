@@ -30,6 +30,7 @@
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
     rel="stylesheet"
   >
+  <link rel="preload" href="assets/images/bizmoon-logo-png.webp" as="image" type="image/webp">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -37,13 +38,16 @@
   <div class="page-shell">
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="BizMoon home">
-        <img
-          class="brand-logo"
-          src="assets/images/bizmoon-logo-mark.png"
-          alt="BizMoon logo"
-          width="48"
-          height="48"
-        >
+        <picture>
+          <source srcset="assets/images/bizmoon-logo-mark.webp" type="image/webp">
+          <img
+            class="brand-logo"
+            src="assets/images/bizmoon-logo-mark.png"
+            alt="BizMoon logo"
+            width="48"
+            height="48"
+          >
+        </picture>
         <span class="brand-copy">
           <span class="brand-name">BizMoon</span>
           <span class="brand-tagline">done-for-you business launch</span>
@@ -166,7 +170,10 @@
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <img src="assets/images/bizmoon-logo-png.png" alt="">
+          <picture>
+            <source srcset="assets/images/bizmoon-logo-png.webp" type="image/webp">
+            <img src="assets/images/bizmoon-logo-png.png" alt="" fetchpriority="high" width="1536" height="1024">
+          </picture>
         </div>
       </section>
 
