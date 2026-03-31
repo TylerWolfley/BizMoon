@@ -2749,8 +2749,13 @@ h3 {
 
 /* ── Section rhythm: intentional, not accidental ── */
 
+#selected-launches {
+  padding-top: 2.5rem;    /* tighter top — first section directly under the hero */
+  padding-bottom: 3.5rem;
+}
+
 #what-you-get {
-  padding-top: 2.5rem;    /* tighter top — support section under the hero */
+  padding-top: 3rem;
   padding-bottom: 3.5rem;
 }
 
