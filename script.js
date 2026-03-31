@@ -172,6 +172,8 @@ document.addEventListener("click", () => {
     '.featured-launch-band',
     '.cta-strip',
     '.launch-card',
+    '.blurb-card',
+    '#how-every-build .process-steps li',
   ].join(', ');
 
   var els = document.querySelectorAll(revealSelector);
@@ -179,8 +181,8 @@ document.addEventListener("click", () => {
 
   // Stagger delays only for elements that are part of the reveal set
   var elsSet = new Set(els);
-  document.querySelectorAll('.value-grid, .setup-grid, .package-grid, .addon-card-grid, .deliverable-grid, .orbit-plan-grid, .launch-grid').forEach(function (grid) {
-    grid.querySelectorAll('article, .package-card, .addon-card, .deliverable-card, .launch-card').forEach(function (card, i) {
+  document.querySelectorAll('.value-grid, .setup-grid, .package-grid, .addon-card-grid, .deliverable-grid, .orbit-plan-grid, .launch-grid, .blurb-grid, .process-steps').forEach(function (grid) {
+    grid.querySelectorAll('article, .package-card, .addon-card, .deliverable-card, .launch-card, .blurb-card, .process-steps > li').forEach(function (card, i) {
       if (elsSet.has(card)) {
         card.style.transitionDelay = (i * 0.07) + 's';
       }
