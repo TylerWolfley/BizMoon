@@ -2882,3 +2882,185 @@ h3 {
   color: var(--text-strong);
   line-height: 1;
 }
+
+/* ================================================================
+   Modern UI Polish
+   ================================================================ */
+
+/* ── Easing token ── */
+:root {
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Eyebrow accent mark ── */
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 2.5px;
+  background: var(--accent);
+  border-radius: 999px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  opacity: 0.6;
+}
+
+/* ── Hero entrance animation ── */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-copy {
+    animation: heroFadeUp 0.6s var(--ease-spring) both;
+  }
+
+  .hero-visual,
+  .hero-note {
+    animation: heroFadeUp 0.65s var(--ease-spring) 0.1s both;
+  }
+}
+
+/* ── Button hover polish ── */
+.button {
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.18s var(--ease-spring),
+    box-shadow 0.2s ease;
+}
+
+.button-primary {
+  box-shadow: 0 2px 8px rgba(23, 63, 120, 0.18);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  background: var(--button-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(23, 63, 120, 0.28);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* ── Nav CTA button shadow + lift ── */
+.nav-cta {
+  box-shadow: 0 1px 5px rgba(23, 63, 120, 0.18);
+  transition:
+    background 0.2s ease,
+    transform 0.18s var(--ease-spring),
+    box-shadow 0.2s ease;
+}
+
+.nav-cta:hover,
+.nav-cta:focus-visible {
+  background: var(--button-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(23, 63, 120, 0.25);
+}
+
+/* ── Subtle section dividers ── */
+main > section + section {
+  border-top: none;
+  position: relative;
+}
+
+main > section + section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100%, 56rem);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--line-strong) 20%,
+    var(--line-strong) 80%,
+    transparent 100%
+  );
+}
+
+/* ── Card hover lift — contained card types only ── */
+.value-grid.four-up article,
+.setup-grid article,
+.output-preview,
+.deliverable-card,
+.addon-card,
+.orbit-step {
+  transition: transform 0.22s var(--ease-spring), box-shadow 0.22s ease;
+}
+
+.value-grid.four-up article:hover,
+.setup-grid article:hover,
+.output-preview:hover,
+.deliverable-card:hover,
+.addon-card:hover,
+.orbit-step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(11, 26, 47, 0.09);
+}
+
+/* ── Trust + FAQ card hover ── */
+.trust-grid article,
+.faq-list article {
+  transition:
+    transform 0.22s var(--ease-spring),
+    border-color 0.2s ease,
+    box-shadow 0.22s ease;
+}
+
+.trust-grid article:hover,
+.faq-list article:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+  box-shadow: 0 8px 22px rgba(11, 26, 47, 0.07);
+}
+
+/* ── Package card hover ── */
+.package-card {
+  transition: transform 0.24s var(--ease-spring), box-shadow 0.24s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px rgba(23, 63, 120, 0.13);
+}
+
+.featured-package:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 36px 70px rgba(23, 63, 120, 0.20);
+}
+
+/* ── Open-border value-grid articles (3-up): subtle hover accent ── */
+.value-grid:not(.four-up) article {
+  transition: border-color 0.2s ease;
+}
+
+.value-grid:not(.four-up) article:hover {
+  border-color: rgba(23, 63, 120, 0.25);
+}
+
+/* ── Scroll-reveal animation (respects prefers-reduced-motion) ── */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.5s var(--ease-spring),
+      transform 0.5s var(--ease-spring);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
