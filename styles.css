@@ -3199,7 +3199,7 @@ main > section + section::before {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .launch-card-content {
