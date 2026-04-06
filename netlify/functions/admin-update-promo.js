@@ -11,23 +11,8 @@
 "use strict";
 
 const { getStore } = require("@netlify/blobs");
+const { isValidPromo } = require("./_promo");
 const { verifySessionToken, extractCookie } = require("./_session");
-
-/** Validate that an incoming promo payload is safe and well-formed. */
-function isValidPromo(obj) {
-  return (
-    obj !== null &&
-    typeof obj === "object" &&
-    typeof obj.active === "boolean" &&
-    typeof obj.percentOff === "number" &&
-    Number.isFinite(obj.percentOff) &&
-    obj.percentOff >= 1 &&
-    obj.percentOff <= 99 &&
-    typeof obj.label === "string" &&
-    obj.label.trim().length > 0 &&
-    obj.label.length <= 80
-  );
-}
 
 exports.handler = async function handler(event) {
   if (event.httpMethod !== "POST") {
